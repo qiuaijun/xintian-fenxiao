@@ -1,0 +1,96 @@
+<link href="../tp/3/css/style.css" rel="stylesheet" type="text/css"/>
+<!--main-->
+<div class="zc_mian">
+  <div class="zc_top">
+    <h2>微信主注册</h2>
+
+    <p class="zc_top_a">有账号？请至 <a href="#/home">首页登录！</a></p>
+  </div>
+  <div class="zc_con">
+    <form class="comform" name="reg" id="reg" ng-submit="userregist()">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr class="bottom_boder">
+          <td width="80" height="77">&nbsp;</td>
+          <td width="114">*用户名：</td>
+          <td width="290"><label for="addusername"></label>
+            <input type="text" name="user" class="zc_textbox" ng-model="registForm.user"/></td>
+          <td width="43"><img src="/tp/3/images/wdxx_ico3.jpg" width="23" height="22"/></td>
+          <td class="zc_con_font">5-16个字符，唯一性 不可修改！</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*密码：</td>
+          <td><input type="password" name="pwd" class="zc_textbox" ng-model="registForm.pwd"/></td>
+          <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+          <td class="zc_con_font">6-20个字符，英文数字字符组合</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*确认密码：</td>
+          <td><input type="password" name="repwd" class="zc_textbox"/></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*QQ：</td>
+          <td><input type="text" name="qq" class="zc_textbox" ng-model="registForm.qq"/></td>
+          <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+          <td class="zc_con_font">以下三种联系方式必填一种</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*手机：</td>
+          <td><input type="text" name="tel" class="zc_textbox" ng-model="registForm.phone"/></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*电子邮箱：</td>
+          <td><input type="text" name="email" class="zc_textbox" ng-model="registForm.email"/></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*支付宝账号：</td>
+          <td><input type="text" name="zhifubao" class="zc_textbox" ng-model="registForm.alipayNo"/></td>
+          <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+          <td class="zc_con_font"> 不可更改！！ 用于 打款的支付宝账号</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*支付宝姓名：</td>
+          <td><input type="text" name="xingming" class="zc_textbox" ng-model="registForm.alipayUser"/></td>
+          <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+          <td class="zc_con_font">不可更改！！ 真实姓名，用于打款核对</td>
+        </tr>
+        <tr class="bottom_boder">
+          <td height="77">&nbsp;</td>
+          <td>*邀请码：</td>
+          <td><input type="text" name="superior1" readonly value="admin" class="zc_textbox"
+                     ng-model="registForm.inviter"/><input type="hidden"
+                                                           name="superior"
+                                                           value="admin"
+                                                           class="zc_textbox"/>
+          </td>
+          <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+          <td class="zc_con_font">无邀请码不能注册！</td>
+        </tr>
+        <meta charset="utf-8"/>
+        <tr>
+          <td height="130"><input type="hidden" name="zcyzm"
+                                  value="c131ea2570f610Pai9EGJ0GgTgLiIht5W8rmrgm32Tm7R29reBr9l6A"></td>
+          <td>&nbsp;</td>
+          <td colspan="3">
+            <button value=""
+                    style="border:none; width:351px; height:49px; background:url(/tp/3//images/zc_ewqd.jpg)"/>
+          </td>
+        </tr>
+      </table>
+
+    </form>
+  </div>
+  <div style="clear:both;"></div>
+</div>

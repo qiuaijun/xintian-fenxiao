@@ -1,0 +1,63 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<script src="/images/Chart.js"></script>
+
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="/user/channelList.php" class="a_pitch">我的公众号</a>
+      <a href="/user/channel.php">公众号统计</a>
+    </div>
+    <div class="right_con">
+      我的公众号
+    </div>
+    <div class="right_con1">
+      <a href="/user/main.php">返回用户首页</a> <a class="right_con1_b" href="#/addChannel">添加公众号</a>
+    </div>
+
+    <div class="right_con2 mtop5 mbot0 borno">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#f2f2f2" class="right_con2_top colheis">
+          <td width="100" height="43" class="youxia">ID</td>
+          <td width="200'" class="youxia">公众号</td>
+          <td width="280" class="youxia">类型</td>
+          <td width="98" class="youxia">人数</td>
+          <td width="298" class="youxia">说明</td>
+          <td width="98" class="youxia">操作</td>
+        </tr>
+        <?php
+					$res=sql("s", "channel", "*", "where user='".$user."'");
+					if ($res) {
+					$k=1;
+						foreach ($res as $info){
+					if($k%2==1){
+					$col="#FFFFFF";
+					}else{
+					$col="#FFFFCC";
+					}
+					$k++;
+					echo '<tr  bgcolor="'.$col.'">
+        <td class="youxia">'.gv($info,'id').'</td>
+        <td class="youxia">'.gv($info,'name').'</td>
+        <td class="youxia">'.gv($info,'leixing').'</td>
+        <td class="youxia">'.gv($info,'num').'</td>
+        <td class="youxia">'.gv($info,'shuoming').'</td>
+        <td class="youxia"><a href="../control.php?oper=channeldel&id='.gv($info,'id').'">删除</a></td>
+        </tr>';
+        }
+        }
+        ?>
+
+      </table>
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--foot-->
+
+<div ng-include="'/views/user/foot.html'"></div>
+
+

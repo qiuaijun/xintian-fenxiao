@@ -1,0 +1,189 @@
+/* 微播易前端库 **/
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+
+/** window start-- **/
+.weiboyiWindow {
+  position: absolute;
+  display: none;
+}
+.ui-draggable .weiboyiWindow_tl {
+  cursor: move;
+}
+
+.weiboyiWindow_tc {
+  border-right: 1px solid #a0a0a0;
+  border-top: 1px solid #a0a0a0;
+}
+
+.weiboyiWindow_tl {
+  padding-left: 6px;
+  padding-top: 7px;
+  background: url(images/window/window_border.png) repeat left top;
+}
+
+.weiboyiWindow_tr {
+  padding-right: 6px;
+  border-left: 1px solid #a0a0a0;
+}
+
+.weiboyiWindow_bl {
+  padding-left: 6px;
+  padding-bottom: 6px;
+  background: url(images/window/window_border.png) repeat left top;
+}
+
+.weiboyiWindow_br {
+  padding-right: 6px;
+  border-left: 1px solid #a0a0a0;
+  /*background: url(images/window/corners-sprite-br.png) no-repeat right bottom;*/
+  border-bottom-color:#99bbe8;
+}
+
+.weiboyiWindow_bc {
+  background-color: #fff;
+  border-right: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  /*background: url(images/window/corners-sprite-bc.png) repeat-x left bottom;*/
+  /*padding-bottom: 6px;*/
+  _margin-top: -5px;
+  +zoom: 1;
+}
+
+.weiboyiWindow_foot {
+  border-top: 1px dashed #d6d6d6;
+  margin: 0 11px;
+  height: 43px;
+  text-align: right;
+  _padding-top: 5px;
+}
+
+.weiboyiWindow_btn {
+  margin: 8px 0 0 15px;
+  cursor: pointer;
+}
+
+.weiboyiWindow_mc {
+    background-color: #ffffff;
+    border-right: 1px solid #a0a0a0;
+}
+
+.weiboyiWindow_ml {
+  padding-left: 6px;
+  background: url(images/window/window_border.png) repeat left top;
+}
+
+.weiboyiWindow_mr {
+  padding-right: 6px;
+  border-left: 1px solid #a0a0a0;
+}
+
+.weiboyiWindow_head {
+  background-color: #fddebe;
+  border-bottom: 1px solid #fea773;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px 0 12px;
+    overflow: hidden;
+}
+
+.weiboyiWindow_head_tools {
+  float: right;
+  line-height: 30px;
+  display: block;
+  height: 30px;
+}
+
+.weiboyiWindow_head_title {
+  display: block;
+  float: left;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "微软雅黑", "宋体";
+}
+
+.weiboyiWindow_head_icon {
+  display: block;
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+.weiboyiWindow_mask {
+  position: fixed;
+  background: black;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  _position: absolute;
+}
+
+.weiboyiWindow_mask iframe {
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+}
+
+.weiboyiWindow_body {
+  overflow: auto;
+  padding: 10px;
+}
+
+.weiboyiWindow_animateHelper {
+  position: absolute;
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.ie6mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  filter: alpha(opacity=0);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.weiboyiWindow .weiboyiTool {
+  *margin-top: 8px;
+}
+
+.weiboyiWindow.absoluteCenter {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight / 2));
+  _left: expression(eval(document.documentElement.scrollLeft + document.documentElement.clientWidth / 2));
+  zoom: 1;
+}
+
+

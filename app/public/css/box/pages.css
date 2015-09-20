@@ -1,0 +1,1041 @@
+@charset "utf-8";
+.clear{
+    clear: both;
+}
+.middle_padding{
+    padding: 0 6px;
+}
+.content{
+    width: 1100px;
+    margin: 0 auto;
+}
+.topInfo{
+    border-top:2px solid #F0F4F7 ;
+    border-bottom:1px solid #eee;
+    background-color: #F5F5F5;
+    margin-bottom: 22px;
+    height:35px;
+    width: 100%;
+    min-width: 1200px;
+}
+.topInfo_content{
+    float: right;
+    overflow: hidden;
+}
+.topInfo_content li{
+    line-height: 35px;
+    float: left;
+    font-size: 12px;
+    color: #4C687E;
+    margin-right: 27px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat -1px 11px;
+    padding-left: 10px;
+}
+.topInfo_content li.topInfo_content_contact{
+    background:none; ;
+    margin-right: 0;
+}
+.topInfo_content li img{
+    vertical-align: middle;
+}
+.topInfo_content li span{
+    color: #3499FF;
+    font-weight: normal;
+}
+/*LOGO*/
+.logo{
+    display: block;
+    height: 53px;
+    width: 385px;
+    margin-bottom: 20px;
+}
+/*重要通告*/
+.notice_box_body{
+    display: none;
+}
+.notice_box_body li, .notice_box_body p {
+    color: #333;
+    line-height: 28px;
+    text-align: left;
+    text-indent: 24px;
+    font-size: 14px;
+}
+
+.notice_box_body h2 {
+    font-weight: bold;
+    text-align: center;
+    color: #d22926;
+    font-size: 23px;
+    margin: 10px 0;
+}
+.btn_small_link{
+    display: inline-block;
+    margin-top:5px;
+    font-size: 14px;
+}
+/*联系我们悬浮框*/
+.contact_suspension_frame{
+    right:0;
+    z-index:15;
+    position: fixed;
+    bottom: 0;
+    position:fixed;
+    _position: absolute;
+    -right:5px;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+.contactContent{
+    display: none;
+    height: 0;
+}
+
+.suspension_frame_box{
+    border:1px solid #4da1e1;
+    background:#fafafa;
+    width:175px;
+    position: relative;
+}
+.suspension_frame_box h2{
+    height:34px;
+    line-height:34px;
+    padding: 0 3px;
+    font-size:14px;
+    color:#fff;
+    background:#3399FE;
+    margin:1px;
+}
+.suspension_frame_box h2 span{
+    vertical-align:middle;
+    display:inline-block;
+    margin-top:-1px;
+    height:34px;
+}
+.suspension_frame_box h2 b{
+    display:inline-block;
+    width:21px;
+    height:22px;
+    vertical-align:middle;
+    margin-top:1px;
+}
+.suspension_frame_box h2 b{
+    background:url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat 0 -880px;
+}
+.suspension_frame_box h3{
+    height:30px;
+    line-height:30px;
+    padding-left:14px;
+    font-size:12px;
+    font-weight:normal;
+    border-bottom:1px dotted #c1c1c1;
+    cursor:pointer;
+}
+.suspension_frame_box table{
+    margin:0 0 20px 14px;
+    text-align:left;
+    width:144px;
+    font-size: 12px;
+}
+.suspension_frame_box table tr th{
+    padding:5px 0;
+    color:#999;
+    font-weight:normal;
+}
+.suspension_frame_box table tr th img{
+    margin-top:3px;
+}
+.suspension_frame_box table tr td{
+    color:#666;
+}
+.sideNotice_show {
+    height: 2895px;
+    width: 169px;
+    position: fixed;
+    top:158px;
+    *top: 149px;
+    _position: absolute;
+    _top: expression(documentElement.scrollTop + 158 + "px");
+    left: 0;
+}
+/*footer*/
+.footer{
+    font-size: 12px;
+    border-top:1px solid #D2D8E6;
+    padding-top: 24px;
+    margin-bottom: 52px;
+}
+.footer p{
+    text-align: center;
+    color: #9AAAB7;
+    line-height: 24px;
+}
+.footer p span{
+    display: inline-block;
+    margin: 0 7px 0 10px;
+}
+.footer p a{
+    display: inline-block;
+    color: #9AAAB7;
+}
+.footer p a:hover{
+    text-decoration: underline;
+}
+/*导航*/
+.nav{
+    overflow: hidden;
+    border-bottom: 2px solid #FD3400;
+    margin-top: -30px;
+    min-width: 1200px;
+}
+.nav ul{
+    float: right;
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+    display: inline;
+    height: 33px;
+    margin-left: 15px;
+}
+.nav li.iconMedia{
+    margin-left: 0;
+}
+.nav li.iconGrassroots{
+    margin-left: 20px;
+}
+.nav li.iconAbout{
+    margin-left: 20px;
+}
+.nav li a{
+    font-size: 16px;
+    font-weight: bold;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat;
+    padding-left: 32px;
+    color: #4C687E;
+    padding-bottom: 13px;
+}
+.nav li a.nav_current,.nav li a:hover{
+    color: #FF3201;
+}
+.nav li.iconMedia a{
+    background-position: 8px -35px;
+}
+.nav li.iconMedia a:hover,.nav li.iconMedia a.nav_current{
+    background-position: 7px -102px;
+}
+.nav li.iconFamous a{
+    background-position: 7px -169px;
+}
+.nav li.iconFamous a:hover,.nav li.iconFamous a.nav_current{
+    background-position: 7px -237px;
+}
+.nav li.iconGrassroots a{
+    background-position: 0 -307px;
+}
+.nav li.iconGrassroots a:hover,.nav li.iconGrassroots a.nav_current{
+    background-position: 0 -373px;
+}
+.nav li.iconAbout a{
+    background-position: 0px -443px;
+}
+.nav li.iconAbout a:hover,.nav li.iconAbout a.nav_current{
+    background-position: 0 -511px;
+}
+.nav li.iconPengyouquan a{
+    background-position: 8px -1007px;
+}
+.nav li.iconPengyouquan a:hover,.nav li.iconPengyouquan a.nav_current{
+    background-position: 8px -943px;
+}
+.nav_current{
+    position: relative;
+}
+.nav_current span{
+    display:block;
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    line-height: 8px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat 0px -795px;
+    left: 55%;
+    bottom:0;
+    zoom:1;
+}
+/*朋友圈案例*/
+.pengyouquan_stories_box{
+    margin-bottom: 12px;
+}
+.pengyouquan_stories_box ul{
+    overflow: hidden;
+    margin-left: -17px;
+}
+.pengyouquan_stories_box ul li{
+    float: left;
+    margin: 14px 0 14px 17px;
+}
+.pengyouquan_stories_box ul li img{
+    display: block;
+}
+.btn_pengyouquan_stories{
+    border: 1px solid #d0d0d0;
+    border-top: none;
+    background-color: #e5e5e5;
+    padding: 14px 0;
+    width: 204px;
+}
+.btn_pengyouquan_stories a{
+    display: block;
+    margin: 0 auto 5px;
+}
+.btn_pengyouquan_stories a:hover{
+    text-decoration: underline;
+}
+.btn_viewDetail01,.btn_viewDetail02{
+    height: 29px;
+    line-height: 29px;
+    width: 194px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/btn_view.png) no-repeat;
+}
+.btn_viewDetail01{
+    background-position: left top;
+    color: #fff;
+}
+.btn_viewDetail02{
+    background-position: left bottom;
+    color: #919191;
+}
+/*登录+banner*/
+.loginBox{
+    padding: 15px 0;
+    background-color: #F2F3F8;
+    height: 330px;
+    min-width: 1200px;
+}
+.loginBox_show{
+    float: left;
+    width: 815px;
+    height: 327px;
+    position: relative;
+}
+.bannerHome_show{
+    height: 327px;
+    overflow: hidden;
+}
+.bannerHome_show li{
+    height: 327px;
+    display: none;
+}
+.bannerHome_show li.bannerHome_current {
+    display: block;
+}
+/*登录注册成功*/
+.login_welcome{
+    font-size: 12px;
+    padding-top:76px;
+    width: 283px;
+    height: 208px;
+    text-align: center;
+    background: #fff;
+    border:1px solid #339aff;
+    margin-top:-1px;
+}
+.login_welcome p{ height:30px; line-height:30px;}
+.login_welcome p,.login_welcome p a{ color:#666;}
+.login_welcome p span{ margin:0 5px;}
+/*banner区切换btn*/
+.bannerHome_fixedContent {
+    position: absolute;
+    left: 23px;
+    bottom: 20px;
+    background: 0;
+}
+.bannerHome_fixedContent ul{
+    overflow: hidden;
+    float:left;
+    height: 18px;
+}
+.bannerHome_tabBtn{
+    float: left;
+    display: inline;
+    width: 26px;
+    height: 18px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/btn_tab.png) no-repeat 0 -36px;
+    cursor: pointer;
+}
+.bannerHome_tabCurrent{
+    background-position:0 -18px;
+}
+.bannerHome_fixedContent span{
+    float: left;
+    width: 13px;
+    height: 18px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/btn_tab.png) no-repeat;
+}
+.bannerHome_fixedContent span.bannerHome_tabLeft{
+    background-position: 0 0;
+}
+.bannerHome_fixedContent span.bannerHome_tabRight{
+    background-position: -13px 0;
+}
+.loginContent{
+    float: right;
+}
+.loginContent_title{
+    height: 41px;
+    width: 285px;
+    clear: both;
+}
+.loginContent_title li{
+    float: left;
+}
+.loginContent_title a{
+    display: inline-block;
+    width: 84px;
+    padding-left: 55px;
+    height: 41px;
+    line-height: 41px;
+    font-size: 16px;
+    -font-size:14px;
+    vertical-align: middle;
+    color: #4C687E;
+    background:#E5E9F2 url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    border:1px solid #E5E9F2;
+    border-bottom:1px solid #3398ff;
+
+}
+.loginContent_title a:hover{
+    background-color: #E0F0FF;
+}
+.loginContent_title li.platform_A a{
+    background-position: 31px -560px;
+
+}
+.loginContent_title li a.platform_current{
+    background-color: #E0F0FF;
+    color: #3499FF;
+    border:1px solid #3398ff;
+    border-bottom:none;
+    height: 42px;
+}
+.loginContent_title li a.platform_current span{
+    display: block;
+    position: absolute;
+    left: 45%;
+    bottom: -1px;
+    width: 16px;
+    height: 8px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_login_corner.png) no-repeat 0px 1px;
+    z-index: 0;
+}
+.loginContent_title li.platform_A a:hover,.loginContent_title li.platform_A a.platform_current{
+    background-position: 31px -618px;
+}
+.loginContent_title li.platform_C{
+    margin-left: -1px;
+}
+.loginContent_title li.platform_C a{
+    background-position: 14px -678px;
+    padding-left: 34px;
+    padding-right: 13px;
+    width: 96px;
+    border-left:1px solid #3398ff;
+}
+.loginContent_title li.platform_C a:hover,.loginContent_title li.platform_C a.platform_current{
+    background-position: 14px -737px;
+}
+.loginContent_title em{
+    width: 1px;
+    display: inline-block;
+    background-color: #F2F3F8;
+    height: 41px;
+    vertical-align: middle;
+}
+.loginContent_table{
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #339aff;
+    border-top:none;
+    width: 285px;
+    height: 284px;
+    padding-top: 22px;
+    color: #4E677D;
+    position: relative;
+}
+.loginContent_table th{
+    width: 58px;
+    text-align: right;
+}
+.loginContent_table td{
+    padding: 7px 0;
+}
+.loginContent_table td label{
+    vertical-align: middle;
+}
+.loginContent_table td label input{
+    margin: 0px 2px 0 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+.loginContent_table td a{
+    vertical-align: middle;
+    color: #4E677D;
+}
+.loginContent_table td img{
+    vertical-align: middle;
+    width: 42px;
+}
+.loginContent_input{
+    position: relative;
+}
+.login_border{
+    display: inline-block;
+    margin: 0 8px 0 3px;
+    width: 1px;
+    height: 12px;
+    border-right: 1px solid #bababa;
+    vertical-align: middle;
+}
+.loginContent_input input{
+    display: inline-block;
+    width: 200px;
+    padding-left: 3px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #CFD6E6;
+}
+.errorMsgTips{
+    position: absolute;
+    width: 146px;
+    height: 43px;
+    line-height: 35px;
+    padding-left: 10px;
+    top: -44px;
+    left: -10px;
+    color: #ED5F00;
+    display: none;
+    z-index: 11;
+    overflow: hidden;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/bg_error_tips.jpg) no-repeat;
+}
+.errorMsgTips span{
+    border: none;
+    float: left;
+    margin: 0;
+    height: auto;
+    width: auto;
+}
+.errorMsgTips a{
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat 0 -820px;
+}
+.loginContent_input input.errorMsgInput{
+    background-color: #ffe5a8;
+    border-color: #d59d16;
+}
+.loginContent_input input.loginContent_input_Captcha{
+    width: 114px;
+    vertical-align: middle;
+}
+.btnLogin01,.btnLogin02,.btnLogin03{
+    display: inline-block;
+    vertical-align: middle;
+    height: 39px;
+    margin-top: 5px;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/btn_login_v2.jpg) no-repeat;
+    margin-bottom: 18px;
+}
+.btnLogin01{
+    width: 75px;
+    margin-left: 10px;
+    background-position: 0 0;
+}
+.btnLogin01:hover{
+    background-position: 0 -59px;
+}
+.btnLogin02{
+    width: 176px;
+    margin-left: 8px;
+    background-position: 0 -117px;
+}
+.btnLogin02:hover{
+    background-position: 0 -174px;
+}
+.btnLogin03{
+    width: 176px;
+    margin-left: 8px;
+    background-position: 0 -223px;
+}
+.btnLogin03:hover{
+    background-position: 0 -283px;
+}
+/**/
+.mainContent{
+    clear: both;
+    overflow: hidden;
+}
+/*帐号分类*/
+.accountCotent{
+    margin-top: 27px;
+    overflow: hidden;
+}
+.accountCotent_left{
+    width: 799px;
+    float: left;
+}
+.accountCotent_media_left,
+.accountCotent_grassroots_left,
+.accountCotent_pengyouquan_left{
+    width:100%;
+    float: none;
+}
+.accountCotent_famous_left .accountCotent_left_list{
+
+}
+.accountCotent_media_left .middle_padding{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.accountCotent_grassroots_left .middle_padding{
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.accountCotent_left_title{
+    overflow: hidden;
+    width: 100%;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/bg_border.gif) repeat-x left bottom;
+}
+.accountCotent_left_title li{
+    float: left;
+    font-weight: bold;
+    padding: 7px 0 2px;
+    *padding-bottom:5px;
+    border-top: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    -border-top: 2px solid #fff;
+    -border-left: 1px solid #fff;
+    -border-right: 1px solid #fff;
+    border-bottom: 1px solid #FD3400;
+}
+.accountCotent_left_title li a{
+    border-left: 1px solid #EDF2F6;
+    display: inline-block;
+    padding: 0 15px 0 20px;
+    height: 35px;
+}
+.accountCotent_left_title li b{
+    display: inline-block;
+    width: 8px;
+    height: 4px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.accountCotent_left_title li.accountCotent_title_current{
+    border-top: 2px solid #FD3400;
+    border-left: 1px solid #FD3400;
+    border-right: 1px solid #FD3400;
+    border-bottom: 1px solid #fff;
+}
+.accountCotent_left_title li.accountCotent_title_current a{
+    border-left:1px solid #fff;
+}
+.accountCotent_left_title li.accountCotent_title_current span{
+    color:#FF3201;
+
+}
+.accountCotent_left_title li.accountCotent_title_current b{
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat 0 -804px;
+}
+.accountCotent_left_title li.accountCotent_title_current em{
+    color: #FF957B;
+}
+.accountCotent_left_title li span{
+    color: #4C687E;
+    font-size: 18px;
+    width: 100%;
+    line-height: 22px;
+}
+.accountCotent_left_title li em{
+    display: block;
+    font-size: 12px;
+    color: #9AACBA;
+    line-height: 14px;
+}
+.accountCotent_box{
+    overflow: hidden;
+    width: 258px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+.accountCotent_grassroots_left .accountCotent_box{
+    width: 209px;
+}
+.accountCotent_left_content{
+    overflow: hidden;
+    display: none;
+}
+.accountCotent_left_content .accountCotent_box{
+    float: left;
+}
+.seeMore_folkAccount{
+    background: #F2F3F8;
+    line-height: 30px;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 28px;
+}
+.seeMore_folkAccount a{
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: bold;
+}
+.seeMore_folkAccount a:hover{
+    color: #FF3201;
+}
+.seeMore_folkAccount img{
+    vertical-align: -5px;
+    margin-left: 5px;
+}
+.account_head{
+    float: left;
+}
+.accountCotent_box dd{
+    float: right;
+    font-size: 12px;
+    width: 132px;
+}
+.accountCotent_grassroots_left .accountCotent_box dd{
+    width: 122px;
+}
+.accountCotent_box dd span{
+    display: block;
+}
+.accountName{
+    font-size: 14px;
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 2px;
+    color:#4C687E;
+}
+.accountName a{
+    position: absolute;
+    right: 0;
+    top: 1px;
+    font-size: 12px;
+    color: #5D707E;
+}
+.accountInfo{
+    border-top: 1px solid #EDF1F4;
+    border-bottom: 1px solid #EDF1F4;
+    margin: 2px 0 13px;
+    padding: 3px 0;
+    line-height: 18px;
+    color: #4C687E;
+    height: 36px;
+}
+.accountCotent_grassroots_left .accountInfo{
+    height: 18px;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.account_fansNum{
+    color: #9AACBA;
+    margin-bottom: 10px;
+}
+.accountCotent_grassroots_left .account_fansNum{
+    margin: 1px 0 2px;
+}
+.account_fansNum b{
+    color: #FF3201;
+}
+.account_head img{
+    display: block;
+}
+.account_head a{
+    display: block;
+}
+.btn_viewPrice{
+    width: 118px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #DBDFEA;
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/bg_btn_account01.gif) repeat-x;
+    font-size: 14px;
+    font-weight: bold;
+}
+.accountCotent_famous_left .account_head,
+.accountCotent_media_left .account_head{
+    position: relative;
+}
+.accountCotent_grassroots_left .btn_viewPrice{
+    width: 78px;
+}
+.accountCotent_famous_left .btn_viewPrice,
+.accountCotent_media_left .btn_viewPrice{
+    position: absolute;
+    bottom: -18px;
+}
+.accountCotent_right{
+    float: right;
+    margin-bottom: 25px;
+}
+.accountCotent_right dl.accountCotent_box{
+    margin-top: 0;
+    border-left:1px solid #DBDFEA;
+    border-right:1px solid #DBDFEA;
+    padding: 23px 12px 22px;
+    margin-bottom: 0;
+}
+.accountCotent_right p.link_toView{
+    border: 1px solid #DBDFEA;
+    border-top:none;
+    width: 282px;
+}
+.account_hotTitle{
+    background: url(http://m.vxiaoyun.com/Public/css/box/images/icon/icon_sprites.png) no-repeat 0 -225px;
+    color: #FF3201;
+    font-size: 18px;
+    padding-left: 24px;
+    *width: 260px;
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #FF3300;
+}
+.link_toView{
+    background-color: #F2F3F8;
+    text-align: center;
+}
+.link_toView a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.view_more{
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    text-decoration: underline;
+}
+.view_more:hover{
+    color: #FF3201;
+}
+.icon_jump{
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-decoration: none;
+}
+/*成功案例*/
+.success_stories{
+    /*margin-top: 35px;*/
+}
+.success_stories_title{
+    font-size: 18px;
+    color: #FF3201;
+    border-bottom: 1px solid #FF3300;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+}
+.success_stories_title span{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    border: 1px solid #FF3300;
+    border-bottom: 1px solid #fff;
+    border-top: 2px solid #FF3300;
+    padding: 0 18px;
+}
+.stories_category{
+    font-size: 18px;
+    color: #3299FE;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 27px;
+    background-color: #F2F3F8;
+    padding-left: 18px;
+    position: relative;
+}
+.stories_category span.link_toView{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 118px;
+    -width:130px;
+    height: 36px;
+}
+.success_stories_list{
+    border: 1px solid #DBDFEA;
+    overflow: hidden;
+    padding-top: 16px;
+    margin-bottom: 28px;
+    clear: both;
+    zoom:1;
+}
+.success_stories_content{
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 520px;
+    margin: 0 14px;
+}
+.success_stories_img{
+    float: left;
+}
+.success_stories_info{
+    float: left;
+    width: 338px;
+}
+.success_stories_info table thead td{
+    color: #3299FE;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 0;
+}
+.success_stories_info table tbody{
+    font-size: 12px;
+}
+.success_stories_info table tbody tr td,
+.success_stories_info table tbody tr th{
+    border-top:1px solid #EDF1F4 ;
+    padding: 5px 0;
+}
+.success_stories_info table tbody td{
+    line-height: 22px;
+    color: #9AAAB7;
+}
+.success_stories_info table tbody td b{
+    color: #5D707E;
+}
+.success_stories_info table tbody th img{
+    margin:  3px 3px 0 26px;
+}
+/*渠道客户&品牌客户*/
+.platformAccount_title{
+    margin-bottom: 5px;
+}
+.platformAccount_title b{
+    font-size: 18px;
+    color: #FF3201;
+}
+.platformAccount_title em{
+    font-size: 14px;
+    color: #50667B;
+    margin-left: -4px;
+}
+.platformAccount_user_channel{
+    float: left;
+    width: 526px;
+}
+.platformAccount_user_brand{
+    float: right;
+    width: 535px;
+}
+.platformAccount_user_list{
+    background-color: #fff;
+    border:1px solid #e8e8e8;
+}
+.platformAccount_user_brand .platformAccount_user_list span{
+    width:116px;
+}
+.platformAccount_user_list td{
+    border-left:1px dashed #cecece;
+    border-top:1px dashed #cecece;
+    text-align: center;
+}
+.platformAccount_user_list tr td:first-child{
+    border-left: none;
+}
+.platformAccount_user_list tr:first-child td{
+    border-top:none;
+}
+.platformAccount_user_link{
+    cursor: default;
+    position: relative;
+    zoom: 1;
+    display: inline-block;
+}
+.platformAccount_user_channel td{
+    width: 174px;
+}
+.platformAccount_user_brand td{
+    width: 132px;
+}
+.platformAccount_user_link:hover{
+    text-decoration: none;
+    filter: alpha(opacity=100);
+}
+.platformAccount_user_link img{
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    -webkit-opacity:0.7;
+    opacity: 0.7;
+}
+.platformAccount_user_link:hover img{
+    filter: alpha(opacity=100);
+    -moz-opacity:1;
+    -webkit-opacity:1;
+    opacity: 1;
+}
+.platformAccount_user_link span{
+    display: block;
+    width: 156px;
+    line-height:26px;
+    text-align:center;
+    color:#fff;
+    background:#333;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -webkit_opacity: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.platformAccount_user_link:hover span{
+    display: block;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -webkit_opacity: 0.5;
+    opacity: 0.5;
+}
+.banner_bottom{
+    display: block;
+    margin: 30px 0 23px;
+    clear: both;
+}
+/*首页 首都安全网络日悬浮窗*/
+.dropzone{
+    position: fixed;
+    right: 0;
+    top: 253px;
+    _position: absolute;
+    -right:5px;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+.dropzone_button{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right:1px;
+    top: 1px;
+}

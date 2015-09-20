@@ -1,0 +1,280 @@
+/*   
+首页 样式
+***/
+.page-container{
+    margin: 0;
+}
+.index-banner{
+    height: 420px;
+    background: #60727a url("../img/index-banner-bg.jpg") center -50px;
+    background-size: cover;
+}
+.index-banner .container{
+    height: 420px;
+    position: relative;
+    background: url("../img/index-banner.png") no-repeat 76px 87px;
+}
+.login-wrap{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    height: 320px;
+    background: url("../img/login-wrap-bg.png") no-repeat 0 0;
+    color: #fff;
+}
+.login-wrap form{
+    padding:10px 30px;
+}
+.login-wrap .login-title{
+    font-size: 18px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.login-wrap .form-control{
+    height: 40px;
+    padding-left: 40px;
+}
+.login-wrap .form-control:focus{
+    border: 1px solid #e8e8e8;
+}
+.login-wrap .captcha{
+    height: 30px;
+    padding-left: 10px;
+    width: 80px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.login-wrap .check-code{
+    margin-right: 10px;
+}
+.login-wrap .form-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+.login-wrap .login-icon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 5;
+    background: url("../img/index-icons.png") no-repeat 0px -106px;
+}
+.login-wrap .login-icon-pwd{
+    background-position: 0px -156px;
+}
+.login-wrap .has-error .form-control{
+    border: 1px solid #e8e8e8;
+    color: #f00;
+}
+.login-wrap .help-block{
+    display: none;
+}
+.login-btn{
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+.register-btn{
+    margin-left: 10px;
+    width: 125px;
+    text-align: center;
+    font-size: 18px;
+}
+.login-wrap a{
+    color: #fff;
+}
+.index-banner-word-wrap{
+    position: absolute;
+    top:177px;
+    left: 77px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.index-banner-word-wrap strong{
+    color: #ffffff;
+    font-weight: normal;
+}
+.index-banner-word-wrap .text-light{
+    margin-top: 30px;
+    font-size: 24px;
+}
+.index-area-1{
+    margin-top: 90px;
+    padding-bottom: 70px;
+}
+.index-area-title{
+    text-align: center;
+    line-height: 1;
+    font-size: 28px;
+    color: #34495e;
+    height: 30px;
+    background: url("../img/word-wrap-bg.png") no-repeat 0 12px;
+}
+.index-area-title-2{
+    text-align: center;
+    line-height: 55px;
+    height: 55px;
+    font-size: 28px;
+    color: #333333;
+    background: #f2f2f2;
+}
+.index-area-1 ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 30px 0;
+}
+.index-area-1 li{
+    width: 300px;
+    padding-left: 88px;
+    float: left;
+    position: relative;
+    margin: 30px 50px 30px 0;
+}
+.index-area-1 li .index-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px !important;
+    background: #f1495b url("../img/index-icons.png") no-repeat 20px -285px;
+}
+.index-area-1 li .index-icon-2{ background-position: 20px -390px; background-color: #fb8758; }
+.index-area-1 li .index-icon-3{ background-position: 20px -485px; background-color: #3aaedf; }
+.index-area-1 li .index-icon-4{ background-position: 18px -583px; background-color: #7ec867; }
+.index-area-1 li .index-icon-5{ background-position: 20px -683px; background-color: #a287c9; }
+.index-area-1 li .index-icon-6{ background-position: 18px -788px; background-color: #9dbdcb; }
+.index-area-1 li .title{
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    margin-bottom: 14px;
+}
+.index-area-1 li .content{
+    color: #666;
+}
+.index-area-2{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.index-area-2 strong{
+    font-weight: normal;
+    color: #ff7f02;
+}
+.index-area-3{
+    background-color: #f9f9f9;
+    padding-left: 30px;
+    min-height: 100px;
+}
+.index-area-3 div{
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 25px;
+}
+.index-area-3 strong{
+    font-size: 20px;
+    display: block;
+}
+.index-area-3 .index-3-split{
+    margin-top: 30px ;
+    width: 30px;
+    height: 30px;
+    background: url("../img/index-icons.png") no-repeat -2px -204px;
+}
+.index-bg-1{
+    background-color: #fff;
+}
+.index-bg-2{
+    margin-top: -8px;
+    padding-top: 50px;
+    background: url("../img/index-bg-2.png") no-repeat 0 0;
+}
+.bg-f2f7fb{background-color: #f2f7fb;}
+.index-area-4{
+    height: 400px;
+    background: url("../img/bg-ensure.png") no-repeat 7px 130px;
+}
+.index-area-4 ul{
+    padding: 0;
+    margin: 90px 10px 0px 380px;
+    list-style-type: none;
+}
+.index-area-4 li{
+    padding-left: 20px;
+    font-size: 16px;
+    margin: 22px 0;
+    color: #333333;
+    background: url("../img/index-icons.png") no-repeat -8px -258px;
+}
+.index-area-4 li.ul-title{
+    color: #f87450;
+    padding-left: 0px;
+    font-size: 28px;
+    background: none;
+}
+.index-area-4 li strong{
+    color: #34495e;
+}
+.index-step{
+    margin: 0px auto 90px;
+    width: 1000px;
+    height: 130px;
+    background: url("../img/index-step-bg.png") no-repeat  0 0 ;
+}
+
+.index-area-6{
+    padding: 90px 0 75px;
+}
+.index-ul-2{
+    margin-top: 40px;
+    padding: 0;
+}
+.index-ul-2 li{
+    list-style-type: none;
+    float: left;
+    width: 33.33333%;
+    margin: 15px 0;
+    position: relative;
+}
+.index-ul-2-title{
+    font-weight: bold;
+    padding-left: 80px;
+    color: #34495e;
+    padding-bottom: 6px;
+}
+.index-ul-2-desc{
+    height: 80px;
+    width: 310px;
+    padding: 18px 18px 0 80px;
+    border: 1px solid #e0e4ed;
+    color: #777;
+    background-color: #fcfdfe;
+}
+.index-ul-2-avatar{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    overflow: hidden;
+    border-radius: 100px !important;
+}
+
+.index-join-us{
+    padding-top: 160px;
+    padding-bottom: 60px;
+    background: url("../img/index-word-join-us.png") no-repeat center 88px;
+}
+.index-join-us-btn{
+    font-size: 30px;
+    width: 300px;
+    line-height: 70px;
+    padding: 0;
+    background-color: #87b2eb;
+}
+.index-join-us-btn:hover{
+    background-color: #719dd6;
+}

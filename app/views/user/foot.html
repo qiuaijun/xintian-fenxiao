@@ -1,0 +1,74 @@
+<div class="foot">
+  <div class="foot_con">
+    <div class="foot_con_a">
+      <a href="../user/main.php">用户中心</a>
+      <a href="../info/gsjj.html">公司简介</a>
+      <a href="../info/fclc.html">分成流程</a>
+      <a href="../info/zytz.html">重要通知</a>
+      <a href="../info/zprc.html">招聘人才</a>
+      <a href="../info/kfzx.html">客服中心</a>
+      <a href="../info/lxwm.html">联系我们</a>
+    </div>
+    <?=gv($info_copy,"copyright");?>
+  </div>
+</div>
+<!--在线客服-->
+<div class="fixedBox">
+  <UL class="fixedBoxList">
+    <LI style="display: block;" id="cartboxs" class="fixeBoxLi cart_bd">
+      <P class="good_cart">0</P>
+      <span class="fixeBoxSpan"></span> <strong>投诉意见</strong>
+
+      <div class="cartBox">
+        <div class="bjfff"></div>
+        <div class="contactManager_box contactManager" id="cm_more">
+          <!--[if IE 6]>
+          <iframe src="about:blank" frameborder="0"></iframe>
+          <![endif]-->
+          <table>
+            <tr class="contactManager_title">
+              <td>
+                <img src="../tp/3/images/icon_manager.jpg" alt="微分销"/>
+                <span>微分销</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=<?=gv($home," qq")?>&site=qq&menu=yes" target="_blank"
+                alt="点击这里给我发消息" title="点击这里给我发消息">
+                <img src="../tp/3/images/icon_qq.jpg" alt="QQ"/>
+                <span><?=gv($home,"qq")?></span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="../tp/3/images/icon_mobile.jpg" alt="手机号码"/>
+                <span><?=gv($home,"tel")?></span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a title="交流群">
+                  <img src="../tp/3/images/icon_qq.jpg" alt="群"/>
+                  <span>QQ群：<?=gv($home,"qun")?></span>
+                </a>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+    </LI>
+    <LI class="fixeBoxLi Home"><A href="../index.php"> <span class="fixeBoxSpan"></span> <strong>返回首页</strong> </A></LI>
+    <LI class="fixeBoxLi BackToTop"><span class="fixeBoxSpan"></span> <strong>返回顶部</strong></LI>
+  </UL>
+</div>
+
+<div style="display:none;">
+  <!--放置客服代码-->
+</div>
+<script src="/images/lanrenzhijia.js"></script>
+<script src="/static/js/j.js?0829"></script>

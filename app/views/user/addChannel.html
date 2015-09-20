@@ -1,0 +1,107 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+  function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
+  function pk() {
+    if (trim(detail.name.value) == "" || trim(detail.leixing.value) == "" || trim(detail.num.value) == "") {
+      alert("请填写公众平台名称!!!");
+      detail.name.focus();
+      return false;
+    }
+    if (detail.leixing.value != "") {
+      if (trim(detail.leixing.value) == "") {
+        alert("请选择公众号类型！");
+        detail.leixing.focus();
+        return false;
+      }
+    }
+    if (detail.num.value != "") {
+      if (trim(detail.num.value) == "") {
+        alert("请填写粉丝数量！");
+        detail.num.focus();
+        return false;
+      }
+    }
+  }
+</script>
+
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="/user/channelList.php" class="a_pitch">我的公众号</a>
+      <a href="/user/channel.php">公众号统计</a>
+    </div>
+    <div class="right_con">
+      我的公众号
+    </div>
+    <div class="right_con1">
+      <a href="/user/main.php">返回用户首页</a> <a class="right_con1_b" href="#/addChannel">添加公众号</a>
+    </div>
+    <div class="wdxx_con mtop40">
+      <form class="comform" name="detail" action="../control.php?oper=addchannel&user=<?=$user;?>" method="post">
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr class="bottom_boder">
+            <td width="102" height="67" class="text_inde">公众号：</td>
+            <td width="290">
+              <input type="text" name="name" class="textbox1"/></td>
+            <td width="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td width="102" height="67" class="text_inde">平台类型：</td>
+            <td width="290">
+              <select name="leixing">
+                <option value="订阅号">订阅号</option>
+                <option value="服务号">服务号</option>
+                <option value="个人微信号">个人微信号</option>
+              </select>
+            </td>
+            <td width="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td width="102" height="67" class="text_inde">平台粉丝数：</td>
+            <td width="290">
+              <input type="text" name="num" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" class="textbox1"/></td>
+            <td width="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td width="102" height="67" class="text_inde">平台简介：</td>
+            <td width="290">
+              <input type="text" name="shuoming" class="textbox1"/></td>
+            <td width="300">比如男女比例</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="100" colspan="4" class="table_left">
+              <input type="submit" name="button" value="" onClick="return pk()"
+                     style="border:none; width:170px; height:49px; background:url(images/wdxx_qd.jpg)"/>
+            </td>
+          </tr>
+        </table>
+
+      </form>
+    </div>
+    <p class="ddxq_con1 mleft40 paddbotno paddtopno mtop20">
+      <i class="ddxq_con1_title">让我们看看都有那些渠道平台吧！：</i><br/>
+      1、如自己收集订单信息，可点上方 录单 按钮录单；<br/>
+      2、由于 反恶意下单机制，同一微信用户不能对同一商品重复下单；<br/>
+      3、可根据情况设置渠道参数（直接在此页面新增渠道即可）；<br/>
+      4、如自己收集订单信息，可点上方 录单 按钮录单；<br/>
+      5、由于 反恶意下单机制，同一微信用户不能对同一商品重复下单；<br/>
+      6、可根据情况设置渠道参数（直接在此页面新增渠道即可）；
+    </p>
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>
+
+

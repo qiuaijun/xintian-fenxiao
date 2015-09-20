@@ -1,0 +1,26 @@
+<div id="quan" style="position:relative;">
+
+  <div style="height:50px"></div>
+  <div id="wrap" class="clearfix" style="margin:0px auto;">
+    <div style="position: absolute; left:1007px; top: 104px;"><!--<img src="static/img/2weima.jpg" width="191" height="204">--></div>
+    <div style="margin-bottom:20px"><img src="/static/img/step.png"></div>
+    <img class="fl" src="/static/img/LOGO.jpg" />
+    <div class="login">
+      <form id="login" ng-submit="formLogin()">
+        <h3>从这里开始赚钱</h3>
+        <p><input type="text" name="user" ph="用户名" /></p>
+        <p><input type="password" name="pwd" ph="******" /><input type="hidden" name="hash" value="c5998e30" /></p>
+        <div class="sub">
+          <table width="260" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th scope="col"><button class="big" type="submit" >登&nbsp;&nbsp;录</button></th>
+              <th scope="col"><span style="background-color:#C00; color:#FFF; padding:10px 40px 10px 40px;"> <a href="#/regist"><font color="#FFFFFF">注&nbsp;&nbsp;册</font></a></span></th>
+            </tr>
+          </table>
+        </div>
+        <div class="sub">QQ:<?=gv($info,"qq");?></div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/static/js/j.js?0829"></script>

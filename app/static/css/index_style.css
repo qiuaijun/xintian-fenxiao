@@ -1,0 +1,55 @@
+
+
+/*产品及文案*/
+.cpjwa_con{ float:left; width:800px; height:70px; font-size:16px; color:#048b66;}
+.cpjwa_con a{ color:#fff;}
+.cpjwa_con1{ float: left; width:800px;}
+.cpjwa_con1 ul{ padding:0px; margin:0px; padding-left:10px; min-width:810px;}
+.cpjwa_con1 ul li{ float: left; display:block; width:248px; border:1px solid #cccccc; height:335px;  margin-right:15px; margin-bottom:15px;}
+.cpjwa_con1_a{ float:left; display:block; width:248px; height:165px; border-bottom:1px solid #cccccc;}
+.cpjwa_con1_b{ float:left; width:228px; height:100px; border-bottom:1px solid #cccccc;  padding:0px 5px;}
+.cpjwa_con1_d{ float:left; width:228px; height:30px; border-bottom:1px solid #cccccc;  padding-left:11px; padding-right:10px; line-height:30px; color:#666666; font-size:13px;}
+.cpjwa_con1_b h2{ font-size:16px; color:#048b66; line-height:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cpjwa_con1_b h2 a{color:#ff0000;}
+.cpjwa_con1_b_1{ font-size:12px; color:#666666; line-height:20px;overflow:hidden;text-overflow:ellipsis;white-space:normal;}
+.cpjwa_con1_b_1 i.blue{color:#048b66;}
+.cpjwa_con1_c{ float:left; width:248px; height:79px;}
+.cpjwa_con1_c1{ float:left; display:block; width:50px; height:52px; text-align:center; color:#fff; background-image:url(cp_img2.jpg); font-size:14px; color:#fff; font-style:normal; line-height:20px; padding-top:4px;  margin-left:11px; margin-top:12px;}
+.cpjwa_con1_c2{ float:left; display:block; width:50px; height:52px; text-align:center; color:#fff; background-image:url(cp_img3.jpg); font-size:14px; color:#fff; font-style:normal; line-height:20px; padding-top:4px;  margin-left:7px; margin-top:12px;}
+.cpjwa_con1_c3{ float:left; display:block; margin-left:11px; margin-top:12px;}
+
+.right_con{
+	float:left;
+	border-bottom:1px solid #cccccc;
+	height:73px;
+	width:740px;
+	background-image: url(wdxx_ico2.jpg);
+	background-color:#f6f6f6;
+	background-repeat: no-repeat;
+	background-position: 24px center;
+	padding-left:60px;
+	font-size:18px;
+	color:#048b66; line-height:73px;
+}
+.right_con1{
+	float:left;
+	border-bottom:1px solid #cccccc;
+	height:55px;
+	width:740px;
+	background-image: url(wdxx_ico1.jpg);
+	background-repeat: no-repeat;
+	background-position: 24px center;
+	padding-left:60px;
+	font-size:18px;
+	color:#048b66; line-height:55px;
+	
+}
+.right_con1_b{
+	background-image:url(spxq_ico.jpg);
+	padding-left:22px;
+	margin-left:80px;
+	display:inline-block;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.right_con1 a{ color:#048b66; text-decoration:underline;}

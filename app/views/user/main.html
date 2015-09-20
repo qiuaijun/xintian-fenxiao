@@ -1,0 +1,136 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<script src="/images/Chart.js"></script>
+
+<div class="main index_main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right index_right">
+    <div class="index_con">
+
+
+      <h2>欢迎回来，<i class="red"><?=$user;?></i> <br>
+        专属媒介经理：<i class="red"><?=gv($info_user,"superior")?></i>&nbsp;&nbsp; qq：<i
+          class="red"><?=gv($info_user,"sup_qq")?></i></h2>
+
+      <div class="index_con_a">
+        <div class="index_con_a_title">统计图表</div>
+        <p class="index_con_a_font">
+          <canvas id="myChart" width="650" height="200"></canvas>
+        </p>
+      </div>
+      <div class="index_con_a">
+        <div class="index_con_a_title">订单统计</div>
+
+        <p class="index_con_a_font">新增订单：<i class="red"><?=$num1;?></i>个，预计分成：<i class="red"><?=$money1;?></i>元
+          <br>
+          已确认(待发货)订单：<i class="red"><?=$num9;?></i>个，预计分成：<i class="red"><?=$money9;?></i>元
+          <br>
+          假单：<i class="red"><?=$num10;?></i>个，损失分成：<i class="red"><?=$money10;?></i>元
+          <br>
+          无法联系：<i class="red"><?=$num11;?></i>个，损失分成：<i class="red"><?=$money11?></i>元
+          <br>
+          发货中订单：<i class="red"><?=$num2;?></i>个，预计分成：<i class="red"><?=$money2;?></i>元
+        </p>
+      </div>
+
+      <div class="index_con_a">
+        <div class="index_con_title1">签收订单</div>
+        <p class="index_con_a_font">已签收订单：<i class="red"><?=$num3;?> </i>个，预计返款：<i class="red"><?=$money3;?></i>元<br>
+          已结算订单：<i class="red"><?=$num8;?></i> 个，实际返款：<i class="red"><?=$money8;?></i> 元</p>
+      </div>
+
+      <div class="index_con_a">
+        <div class="index_con_a_title2">拒签订单</div>
+        <p class="index_con_a_font">已拒收订单：<i class="red"><?=$num6;?></i>个，拒收订单损失分成：<i class="red"><?=$money6;?></i>
+          元<br>
+          已退货订单：<i class="red"><?=$num7;?></i> 个，退货扣除分成：<i class="red"><?=$money7;?></i> 元</p>
+      </div>
+      <div class="index_con_a">
+        <div class="index_con_a_title3">特别提示</div>
+        <p class="index_con_a_font">1、分成每天结算一次，直接转入您的支付宝，请隔天查账，要是发现异常，请联系客服；<br>
+          2、新产生订单（未确认）实时更新，只要顾客下单，就实时统计出来，其他信息每天更新一次；<br>
+          3、上面的订单统计是根据状态来的，状态变化了，就会划分到其它类别。</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<!--底部-->
+
+<script type="text/javascript" src="images/jquery.js"></script>
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>
+
+<input type="hidden" name="new" id="new" value="<?=$num1;?>">
+<input type="hidden" name="new_p" id="new_p" value="<?=$money1;?>">
+<input type="hidden" name="fahuo" id="fahuo" value="<?=$num2;?>">
+<input type="hidden" name="fahuo_p" id="fahuo_p" value="<?=$money2;?>">
+<input type="hidden" name="qianshou" id="qianshou" value="<?=$num3;?>">
+<input type="hidden" name="qianshou_p" id="qianshou_p" value="<?=$money3;?>">
+<input type="hidden" name="jiesuan" id="jiesuan" value="<?=$num8;?>">
+<input type="hidden" name="jiesuan_p" id="jiesuan_p" value="<?=$money8;?>">
+<input type="hidden" name="jushou" id="jushou" value="<?=$num6;?>">
+<input type="hidden" name="jushou_p" id="jushou_p" value="<?=$money6;?>">
+<input type="hidden" name="tuihuo" id="tuihuo" value="<?=$num7;?>">
+<input type="hidden" name="tuihuo_p" id="tuihuo_p" value="<?=$money7;?>">
+<script type="text/javascript">
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var data = {
+    labels: ["新订单", "发货中", "已签收", "已结算", "已拒收", "已退货"],
+    datasets: [
+      {
+        fillColor: "rgba(220,220,220,0.5)",
+        strokeColor: "rgba(220,220,220,1)",
+        pointColor: "rgba(220,220,220,1)",
+        pointStrokeColor: "#fff",
+        data: [document.getElementById("new").value, document.getElementById("fahuo").value, document.getElementById("qianshou").value, document.getElementById("jiesuan").value, document.getElementById("jushou").value, document.getElementById("tuihuo").value]
+      },
+      {
+        fillColor: "rgba(151,187,205,0.5)",
+        strokeColor: "rgba(151,187,205,1)",
+        pointColor: "rgba(151,187,205,1)",
+        pointStrokeColor: "#fff",
+        data: [document.getElementById("new_p").value, document.getElementById("fahuo_p").value, document.getElementById("qianshou_p").value, document.getElementById("jiesuan_p").value, document.getElementById("jushou_p").value, document.getElementById("tuihuo_p").value]
+      }
+    ]
+  }
+  var options = {
+    scaleOverlay: false,
+    scaleOverride: false,
+    scaleSteps: null,
+    scaleStepWidth: null,
+    scaleStartValue: null,
+    scaleShowLine: true,
+    scaleLineColor: "rgba(0,0,0,.1)",
+    scaleLineWidth: 1,
+    scaleShowLabels: false,
+    scaleLabel: "<%=value%>",
+    scaleFontFamily: "'Arial'",
+    scaleFontSize: 12,
+    scaleFontStyle: "normal",
+    scaleFontColor: "#666",
+    scaleShowLabelBackdrop: true,
+    scaleBackdropColor: "rgba(255,255,255,0.75)",
+    scaleBackdropPaddingY: 2,
+    scaleBackdropPaddingX: 2,
+    angleShowLineOut: true,
+    angleLineColor: "rgba(0,0,0,.1)",
+    angleLineWidth: 1,
+    pointLabelFontFamily: "'Arial'",
+    pointLabelFontStyle: "normal",
+    pointLabelFontSize: 12,
+    pointLabelFontColor: "#666",
+    pointDot: true,
+    pointDotRadius: 3,
+    pointDotStrokeWidth: 1,
+    datasetStroke: true,
+    datasetStrokeWidth: 2,
+    datasetFill: true,
+    animation: true,
+    animationSteps: 60,
+    animationEasing: "easeOutQuart",
+    onAnimationComplete: null
+  }
+  new Chart(ctx).Line(data, options);
+</script>

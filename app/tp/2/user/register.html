@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>微小宝-自媒体盈利平台</title>
+    <meta property="qc:admins" content="4441727777670263757" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../plugins/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/style-metronic.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!--[if IE 8]>
+    <script type="text/javascript" src="../plugins/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        var SITE_PUBLIC='http://www.wxb.com/';
+        var SITE_UPLOAD='/files/';
+    </script>
+</head>
+<body class="admin">
+
+
+<!-- Copyright � 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Verdana; font-size: 9pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+��ҳ�������� <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.0.0.1025</b></a>  ��  12/03/14 20:33:24.<br>
+<b>��ַ:</b> <a class="info" href="http://www.wxb.com/user/register">http://www.wxb.com/user/register</a><br>
+<b>����:</b> 微小宝-自媒体盈利平台 &nbsp;&bull;&nbsp; <b>��С:</b> 11982<br></div>
+<!-- /Copyright � 2005. Spidersoft Ltd -->
+
+
+<style>
+    .container{
+        width: 1000px;
+    }
+</style>
+<div class="header signup-header">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../www.wxb.html">
+                <img src="../img/logo.png" id="logoimg" alt="logo">
+            </a>
+        </div>
+        <div class="pull-right index-header-list">
+            <span class="index-header-qq">QQ群：355822</span>
+            <span class="index-header-qq">客服QQ：80083271</span>
+            <span class="index-header-tel">电话：400-998-1236</span>
+        </div>
+    </div>
+</div>
+<div class="page-container">
+    <style>
+    .captcha{
+        width: 120px;
+        float: left;
+    }
+    .check-code{
+        margin-left: 20px;
+        width: 85px;
+        height: 34px;
+    }
+    .btn-register{
+        width: 120px;
+        height: 40px;
+        font-size: 18px;
+        text-align: center;
+    }
+</style>
+<p class="container">
+    <span class="page-header-1">用户注册</span>
+    <span class="pull-right">已有帐号？<a href="login.html">去登录</a></span>
+</p>
+<div class="container page-border">
+    <form id="form" class="form-horizontal" action="/user/register" method="post">
+        <div class="form-body margin-top-20">
+            <div class="form-group">
+                <label class="col-xs-3 control-label"><span class="required"> * </span> 用户名：</label>
+                <div class="col-xs-5">
+                    <input type="text" name="user_name" class="form-control placeholder-no-fix" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"><span class="required"> * </span> 密码：</label>
+                <div class="col-xs-5">
+                    <input type="password" id="password" name="password" class="form-control placeholder-no-fix" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"><span class="required"> * </span> 确认密码：</label>
+                <div class="col-xs-5">
+                    <input type="password" name="password2" class="form-control placeholder-no-fix" placeholder="请再次输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"> QQ：</label>
+                <div class="col-xs-5">
+                    <input type="text" name="qq" class="form-control placeholder-no-fix" placeholder="用此QQ号加入交流群">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"><span class="required"> * </span> 手机：</label>
+                <div class="col-xs-5">
+                    <input type="text" name="mobile" class="form-control placeholder-no-fix" placeholder="请输入手机号码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"> e-mail：</label>
+                <div class="col-xs-5">
+                    <input type="text" name="email" class="form-control placeholder-no-fix" placeholder="请输入e-mail地址">
+                </div>
+            </div>
+<!--            <div class="form-group">-->
+<!--                <label class="col-xs-3 control-label"> 邀请码：</label>-->
+<!--                <div class="col-xs-5">-->
+<!--                    <input type="text" name="invitation_code" class="form-control" placeholder="请输入邀请码">-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="form-group">
+                <label class="col-xs-3 control-label"> <span class="required"> * </span> 验证码：</label>
+                <div class="col-xs-5">
+                    <img class="check-code js-refresh-check" src="../index/captcha.html" alt="验证码" width="85"/>
+                    <a class="js-refresh-check" href="javascript:void(0);">看不清楚?换一张</a>
+                    <input type="text" name="captcha" id="captcha" class="form-control captcha pull-left placeholder-no-fix" placeholder="请输入验证码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label"></label>
+                <div class="col-xs-5">
+                    <span id="submit" class="btn btn-register btn-yellow">注&nbsp;&nbsp;册</span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+</div><div class="copyright">
+    <div class="container text-center">
+    	        <p>
+            Copyright © 2014 杭州推宝科技有限公司 All Rights Reserved 版权所有
+            &nbsp;&nbsp;浙ICP备13031773号-3
+        </p>
+        <p>
+            客服电话：400-998-1236
+            <a class="margin-left-10" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=7ea93800f3c76a92e44a79af8e1c5903569f958e4380ca7bebe026c7be232003"><img border="0" width="90" height="22" src="../../pub.idqqimg.com/wpa/images/group.png" alt="微信合作交流vip2群" title="微信合作交流vip2群"></a>
+            <a class="margin-left-10" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=80083271&site=qq&menu=yes"><img border="0" width="77" height="22" src="http://wpa.qq.com/pa?p=2:80083271:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+        </p>
+        <p>
+            <span class="copyright-icon copyright-icon-1"><img src="../img/copyright-pic-1.jpg" width="94"></span>
+            <span class="copyright-icon copyright-icon-2"><img src="../img/copyright-pic-2.jpg" width="94"></span>
+            <span class="copyright-icon copyright-icon-3"><img src="../img/copyright-pic-3.jpg" width="117"></span>
+            <span class="copyright-icon copyright-icon-4"><img src="../img/copyright-pic-4.jpg" width="109"></span>
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="../plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../plugins/underscore-min.js"></script>
+<script type="text/javascript" src="../plugins/back-to-top.js"></script>
+<script type="text/javascript" src="../plugins/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../plugins/win.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../plugins/jquery-validation/additional-methods.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var formValidate;
+        var form=$('#form');
+        var submitBtn=$('#submit');
+        submitBtn.click(function(){
+            form.submit();
+        });
+
+        $(".js-refresh-check").click(function(event) {
+            refreshCheck();
+        });
+
+
+        formValidate = form.validate({
+            errorElement: 'span',
+            errorClass: 'help-block',
+            focusInvalid: true,
+            rules: {
+                user_name: {
+                    required: true,
+                    notZh: true,
+                    rangelength: [5, 20]
+                },
+                password: {
+                    required: true,
+                    rangelength: [6, 20]
+                },
+                password2: {
+                    required: true,
+                    equalTo: "#password"
+                },
+                qq: {
+                    isQQ: true
+                },
+                mobile: {
+                    required: true,
+                    isMobile: true
+                },
+                email: {
+                    email: true
+                },
+                captcha:{
+                    required: true
+                }
+            },
+            messages: {
+                user_name:{
+                    required: '用户名不能为空',
+                    maxlength:'用户名请控制在5-20个字符'
+                },
+                password:{
+                    required: '密码不能为空',
+                    rangelength:'密码请控制在6-20个字符'
+                },
+                password2:{
+                    required: '确认密码不能为空',
+                    equalTo:'两次输入的密码不相同'
+                },
+                mobile:{
+                    required: '手机号码不能为空'
+                },
+                captcha:{
+                    required: '验证码不能为空'
+                }
+            },
+            submitHandler :function(){
+
+                var data = form.serialize();
+                var loading = App.showLoading(submitBtn);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    data: data,
+                    dataType: 'json',
+                    success: function (response) {
+                        loading.revert();
+                        if (response.error == 0) {
+                            submitBtn.unbind('click');
+                            toastr.success('', '注册成功！');
+                            window.location.href = "http://www.wxb.com/index";
+                        } else {
+                            refreshCheck();
+                            toastr.error(response.message, '注册失败！');
+                        }
+                    },
+                    error: function () {
+                        loading.revert();
+                    }
+                });
+
+                return false;
+            },
+            highlight: function (element) { // hightlight error inputs
+                $(element).closest('.form-group').addClass('has-error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change done by hightlight
+                $(element).closest('.form-group').removeClass('has-error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.closest('.form-group').removeClass('has-error'); // set success class to the control group
+            }
+        });
+    });
+
+    //获取校验码
+    function refreshCheck(){
+        var url='http://www.wxb.com/index/captcha';
+        $('.check-code').attr('src',url+'?t='+new Date().getTime());
+        $('.captcha').val('').focus();
+    }
+
+</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+    });
+</script>
+</body>
+</html>

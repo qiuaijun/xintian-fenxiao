@@ -1,0 +1,99 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<script src="/images/Chart.js"></script>
+
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="/user/invite.php" class="a_pitch">我的邀请码</a>
+      <a href="/user/invite_list.php">我的邀请用户</a>
+      <a href="/user/invite_reward.php">用户订单提成</a>
+    </div>
+
+    <div class="right_con">
+      我的邀请码
+    </div>
+    <div class="right_con1">
+      <a href="/user/main.php">返回用户首页</a>
+    </div>
+    <div class="ddyjs_con1">
+      <div class="ddyjs_con1_left height70 borno width700">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="150" height="34" align="right"><font color="#666666">我的邀请链接：</font></td>
+            <td height="30"><font color="#666666">
+              <input type="text" readonly id="link"
+                     value="http://<?=$_SERVER['HTTP_HOST'];?>/login/regist.php?invite=<?=gv($info," id");?>"
+              onfocus="$(this).select()" class="yaoqinglj"/><span class='zhushi'> （右击复制 ）</span> </font>
+
+            </td>
+          </tr>
+          <tr>
+            <td width="150" height="34" align="right"><font color="#666666">移动端邀请连接：</font></td>
+            <td height="30"><font color="#666666">
+              <input type="text" readonly id="link"
+                     value="http://<?=$_SERVER['HTTP_HOST'];?>/m/reg.php?invite=<?=gv($info," id");?>"
+              onfocus="$(this).select()" class="yaoqinglj"/><span class='zhushi'> （右击复制 ）</span> </font>
+
+            </td>
+          </tr>
+          <tr style="margin-top:12px;">
+            <td width="150" height="34" align="right"><font color="#666666">一级提成比率：</font></td>
+            <td height="34" colspan="3"><?=gv($info1,"bili")*100;?>%</td>
+          </tr>
+          <tr style="margin-top:12px;">
+            <td width="150" height="34" align="right"><font color="#666666">二级提成比率：</font></td>
+            <td height="34" colspan="3"><?=gv($info1,"bili1")*100;?>%</td>
+          </tr>
+          <tr style="margin-top:12px;">
+            <td width="150" height="34" align="right"><font color="#666666">三级提成比率：</font></td>
+            <td height="34" colspan="3"><?=gv($info1,"bili2")*100;?>%</td>
+          </tr>
+          <tr>
+          <tr style="margin-top:12px;">
+            <td width="150" height="34" align="right"><font color="#666666">邀请奖励：</font></td>
+            <td>1. 发送你的邀请链接给其他微信主好友，邀请他们加入平台
+              <br>2. 不影响好友增加收入的情况下，自己也可获得 <em>额外奖励</em>
+              <br>3. 奖励的持续时间为 <em>永久</em>，微信主的每一个订单都计算奖励
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+
+    </div>
+    <!-- <div class="right_con1 liebbroud1">
+        我的邀请用户   <span class="mleft20"><font color="#666666">数量：0</font></span>
+     </div>
+
+
+     <div class="right_con1 liebbroud mtop20">
+       用户订单统计
+     </div>
+
+<div class="jlindex">
+
+
+待结算订单：<i class="red">0 </i>个，预计返款：<i class="red">0</i>元
+<br />
+
+已结算订单：<i class="red">0 </i>个，实际返款：<i class="red">0</i>元
+
+</div>
+-->
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+</div>
+</div>
+<script>
+</script>
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>
+
+

@@ -1,0 +1,141 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+  function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
+  function pk() {
+    /**if(trim(detail.username.value)==""){
+		alert("昵称不可为空，请填写!!!");
+		detail.username.focus();
+		return false;
+	}**/
+    if (trim(detail.qq.value) == "" || trim(detail.tel.value) == "" || trim(detail.email.value) == "") {
+      alert("请填写三种联系方式!!!");
+      detail.qq.focus();
+      return false;
+    }
+    if (detail.alipayname.value != "") {
+      if (trim(detail.alipay.value) == "") {
+        alert("请填写完整的支付宝信息！");
+        detail.alipay.focus();
+        return false;
+      }
+    }
+    if (detail.alipay.value != "") {
+      if (trim(detail.alipayname.value) == "") {
+        alert("请填写完整的支付宝信息！");
+        detail.alipayname.focus();
+        return false;
+      }
+    }
+  }
+</script>
+
+
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+  <div class="right">
+    <div class="ddyjs_con">
+      <a href="/user/user_detail.php" class="a_pitch">我的信息</a>
+      <a href="/user/chgpw.php">修改密码</a>
+    </div>
+    <div class="right_con">
+      我的信息
+    </div>
+    <div class="right_con1">
+      <a href="/user/main.php">返回用户首页</a> <span class="mleft60"><font color="#ff7200">会新增自定义头像功能哦，敬请期待！</font></span>
+    </div>
+    <div class="wdxx_con">
+      <form class="comform" name="detail" action="../control.php?oper=user_detail" method="post">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+          <tr class="bottom_boder">
+            <td width="132" height="67" class="text_inde">登陆名：</td>
+            <td width="290">
+              <input type="text" name="loginname" disabled value="<?=$user;?>" style="background:#eeeeee;"
+                     class="textbox1"/></td>
+            <td width="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <!--<tr  class="bottom_boder">
+            <td height="67" class="text_inde">昵称：</td>
+            <td><input type="text"  name="username" value="" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+</tr>-->
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">QQ：</td>
+            <td><input type="text" name="qq" value="<?=gv($info," qq");?>" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">手机：</td>
+            <td><input type="text" name="mobile" value="<?=gv($info," tel");?>" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">电子邮箱：</td>
+            <td><input type="text" name="email" value="<?=gv($info," email");?>" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">平台类型：</td>
+            <td><?=gv($info,"ptlx");?></span>　更改类型：<select name="ptlx">
+              <option value="订阅号">订阅号</option>
+              <option value="服务号">服务号</option>
+              <option value="个人微信号">个人微信号</option>
+            </select></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">粉丝数：</td>
+            <td><input type="text" name="haoyoushu" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" value="<?=gv($info,"
+                       haoyoushu");?>" class="textbox1"/>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">支付宝账号：</td>
+            <td>
+              <input type="text" name="zhifubao" style="background:#eeeeee;" class="textbox1" disabled
+                     value="<?=gv($info," zhifubao");?>" />
+            </td>
+            <td><img src="../tp/3/images/wdxx_ico3.jpg" width="23" height="22"/></td>
+            <td>
+              不可更改！！ 用于打款的支付宝账号
+            </td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">支付宝姓名：</td>
+            <td>
+              <input type="text" name="xingming" style="background:#eeeeee;" class="textbox1" disabled
+                     value="<?=gv($info," xingming");?>"/>
+            </td>
+            <td><img src="../tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+            <td>
+              不可更改！！ 真实姓名，用于打款核对
+            </td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" colspan="4" class="text_inde">支付宝账号用于打款，为保证资金安全，设置后不可更改。如需修改支付宝账号，请联系客服。</td>
+          </tr>
+          <tr>
+            <td height="100" colspan="4" class="table_left">
+              <input type="submit" name="button" value="" onClick="return pk()"
+                     style="border:none; width:170px; height:49px; background:url(images/wdxx_qd.jpg)"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

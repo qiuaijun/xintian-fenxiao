@@ -1,0 +1,168 @@
+@charset "utf-8";
+html{color:#333;background:#fff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,hr{margin:0;padding:0}
+body,button,input,select,textarea{font:14px/1.5 "Microsoft Yahei",tahoma,arial,\5b8b\4f53}
+input,select,textarea{font-size:100%}
+fieldset,img{border:0}
+iframe{display:block}
+abbr,acronym{border:0;font-variant:normal}
+th{text-align:left}
+del{text-decoration:line-through}
+em{font-style:normal;color:#f60;font-weight:700}
+i{font-style:normal}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+q:before,q:after{content:''}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+ins,a{text-decoration:none;}
+abbr{cursor:help;border-bottom: 1px dotted;}
+a:hover{text-decoration:underline;color:#f60}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear: both;height:0;}
+.clearfix {zoom: 1}
+.fl,.fr{display:inline}
+.fl{float:left}
+.fr{float:right}
+.tr{text-align:right}
+.tc{text-align:center}
+.cb{clear:both}
+body .hide{display:none}
+.di{display:inline-block;*display:inline;*zoom:1;}
+.ph{color:#bbb}
+/******* common css *******/
+#top{min-width:1000px;height:100px;background: #FF5B48;background:-webkit-linear-gradient(top, #FF5B48,#AB0202);background:-moz-linear-gradient(top, #FF5B48,#AB0202);background:linear-gradient(to bottom, #FF5B48, #AB0202);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF5B48,endColorstr=#AB0202,grandientType=1);}
+.top,#wrap{margin:0 auto;width:1000px;clear:both;position:relative;z-index:1;zoom:1;overflow:visible;}
+.top{padding-top:20px;font-size:30px;font-weight:700;color:#fff; vertical-align:middle;}
+.top img{margin-right:20px;vertical-align:middle;}
+
+
+#wrap,#footer{margin-top:0px;}
+#footer{
+	min-width:1000px;
+	padding-top:0px;
+	border-top:1px solid #999;
+	text-align:center;
+	font-size:12px;
+}
+#footer p{padding:0 0 5px 0;margin:0 auto;font-size:12px;line-height:20px}
+#footer p a{color:#06c}
+#quan{
+	width:100%;
+	height:500px;
+
+	background-color:#FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.comform{padding:10px 0 0 10px;font-size:14px;}
+.comform li{padding-top:20px;vertical-align:middle;}
+.comform li b,.comform li i,.comform li span,.comform .code{display:inline-block;vertical-align:middle;}
+.comform li b{width:110px;margin-right:5px;font-weight:400;text-align:right;}
+.comform li i{margin:0 8px 0 0;width:17px;height:17px;background: url(b/ico.gif) no-repeat 0 -60px;}
+.comform li span{padding:0 5px;line-height:20px;border:1px solid #ccc;font-size:12px;background: #f8ffea;max-width:280px;}
+.comform label{margin:0 8px 0 0;}
+.comform input[type="text"],.comform input[type="password"]{width:230px;padding:8px 5px;border:1px solid #ccc;font-size:14px;vertical-align:middle;}
+.comform input.small{width:90px;}
+.comform input.big{width:450px;}
+.comform input:focus{border-color:#3c0}
+.comform .code{margin-left:20px;cursor:pointer;}
+.comform .no-label{margin-left:115px;}
+.comform #allerror{background: url(b/ico.gif) no-repeat -130px -28px;color:red;padding:0 0 0 20px;margin:20px 0 0 90px;}
+.comform p{display:inline-block;margin:-19px 0 0 95px;font-size:12px;}
+.comform .ok i{background-position:0 0;}
+.comform .error input{border-color:red}
+.comform .error i{background-position:0 -30px;}
+.comform .error span{background:#ffc;color:red;}
+.comform a{color:#390;}
+.comform a:hover{color:#f60;}
+.table-form{line-height:1.6em}
+.table-form input{margin:5px 0;padding:0 5pxborder:1px solid #ccc;line-height:1.2em;}
+.table-form td{margin:0.6em 0;}
+.table-form th,.table-form td{border-bottom:1px dotted #ccc}
+.last th,.last td{border:0}
+button,a.btn{display:inline-block;padding:0 10px;height:23px;line-height:23px;border:0;background:#C00;font-weight:bold;color:#fff; vertical-align:middle;cursor:pointer;font-size:14px;}
+button:hover,a.btn:hover{background:#520ADD;color:#eee;}
+button.mid,a.mid{padding:0 20px;height:32px;line-height:32px;font-size:16px;}
+button.big,a.big{padding:0 30px;height:45px;line-height:45px;font-size:20px;}
+a.em{color:#ffb}
+
+.tooltip{position:relative;cursor: help;display: inline-block;text-decoration:none;outline: none;padding:0 0.2em;background:#f5f5f5;}
+.tooltip:after{content:"?";margin-left:3px;color:red;position:relative;top:-4px;font:700 12px "Arial Black";}
+.tooltip span{display:none;position:absolute;bottom:30px;left: 50%;z-index: 999;width: 230px;margin-left: -127px;padding: 10px;background: #fff8e8;border:1px solid #fb0;font-size:14px;line-height:21px;}
+.tooltip:hover{border: 0; /* IE6 fix */}
+.tooltip span:before,.tooltip span:after{content: "";position: absolute;z-index: 1000;bottom: -7px;left: 50%;margin-left: -8px;border-top: 8px solid #fff8e8;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 0;}
+.tooltip span:before{border-top-color: #fb0;bottom: -8px;}
+
+.login{float:left;padding:20px 40px;height:240px;margin-left:20px;background: #FFC;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+.login h3{height:50px;font-size:26px;font-weight:400;}
+.login p{margin-top:-1px;height:40px;}
+.login p input{padding:0 10px;height:40px;line-height:40px;width:268px;border:1px solid #999;font-size:16px}
+.login .sub{margin-top:25px;font-size:18px; }
+.login button{margin-right:30px;width:130px;}
+.box{float:left;margin:20px 0 0 20px;padding:8px;width:202px;height:294px;border:1px solid #ccc;}
+.box h3{padding:10px;font-size:18px;border-bottom:1px dashed #ccc;}
+.contact{margin-left:0;width:262px;}
+.contact h3{border:0;}
+.contact p{border-top:1px dashed #ccc;padding:12px;line-height:2.1em;}
+.box td{text-align:center;}
+.box .em td{color:#f00;}
+
+.reg{margin:30px 140px;}
+.reg h2{padding:0 10px;line-height:38px;border-bottom:1px dashed #000;font-size:20px;position:relative;}
+.reg h2 span{position:absolute;right:0;font-size:14px;font-weight:400;}
+.reg h2 a{color:#0c3;}
+
+.menu{float:left;width:170px;}
+.menu dl{margin:0 0 18px;border:1px solid #ccc;}
+.menu dt{background:#f2f2f2;font-size:15px;font-weight:700;cursor:pointer;}
+.menu dt a{display:inline-block;position:relative;padding:0 20px;line-height:38px;width:128px;font-weight:700;color:#666;}
+.menu dt a:hover{text-decoration:none;}
+.menu .cur,.menu .cur dt{border-color:#C00;}
+.menu .cur dt{background:#C00;}
+.menu .expand dt{border-bottom:1px solid #ccc;}
+.menu i{position:absolute;top:15px;right:8px;display:inline-block;border:7px solid #999;height:0;width:0;line-height:0;border-color:#333 #f2f2f2 #f2f2f2;}
+.menu .expand i{border-color:#f2f2f2 #f2f2f2 #333;top:7px;}
+.menu .cur i{border-color:#C00 #C00 #fff;top:7px;}
+.menu i.only{border:0}
+.menu .cur i.only{border-color:#0c3 #0c3 #0c3 #fff;top:11px;right:4px}
+.menu dd{margin:0 10px;padding:9px 0 8px 15px;border-bottom:1px dashed #ccc;display:none}
+.menu dd.last{border:0}
+.menu dd a{color:#999;}
+.menu dd a:hover{color:#f60;}
+.menu dd a.now{font-weight:700;color:#090;}
+.menu .cur dt a{color:#fff;}
+.menu .cur dd,.menu .expand dd{display:block;}
+
+#main{float:right;width:800px;}
+#main .contact{float:right;margin:0 0 0 40px;}
+#main p.title{padding:6px 10px;line-height:28px;border-bottom:1px dashed #ccc;}
+#main p.title b{color:#090;}
+#main hr{border:0;height:1px;border-bottom:1px dashed #ccc;}
+#main p.info{padding:10px;line-height:2.3em;}
+#main p.note{padding:20px 10px;line-height:2.3em;}
+#main p.note b{font-size:20px;}
+#main h2,#main .filter{border-bottom:1px solid #C00;}
+#main h2{font-size:16px;line-height:40px;height:40px;}
+#main .filter form{margin:4px 0 7px;line-height:20px;}
+#main .filter *{vertical-align:text-bottom;}
+#main .filter input{margin-top:5px;height:21px;}
+#main .filter b{font-size:16px;margin-right:15px;}
+
+.uc{}
+.uc p{margin:1px 0;}
+.uc h5{padding:10px 10px 10px 0;margin-top:30px;}
+.uc .notice{padding:15px;margin:0 0 20px;border:1px solid #ccc;background:#f5ffe4;line-height:1.6em;}
+.uc-pager{text-align:right;padding:5px 0;font-size:12px;}
+.uc-pager a{text-decoration:none;color:#390;}
+.uc-pager a:hover{color:#f80;text-decoration:underline;}
+.items h3{margin:10px 0;font-size:16px;font-weight:400;}
+.items p{line-height:22px;color:#888;}
+.items p em{font-weight:400}
+.item h3{font-size:18px;margin:0 0 20px;}
+.item table{margin-left:20px;}
+.item p{margin:15px 0; line-height:25px}
+.item p i{color:#0d3}
+.item li{line-height:2em;margin-left:47px; list-style: square;}
+.item li a{color:#888; text-decoration: underline;}
+.item li a:hover{color:#f80;}
