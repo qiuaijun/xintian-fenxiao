@@ -1,5 +1,4 @@
-﻿<link href="/images/index_style.css" rel="stylesheet" type="text/css">
-<script src="/images/Chart.js"></script>
+﻿<link rel="stylesheet" href="/static/css/index_style.css"/>
 
 <!--MAIN START-->
 <div class="main index_main">
@@ -13,36 +12,33 @@
       <a href="/user/main.php">返回用户首页</a>
     </div>
     <div class="cpjwa_con1">
-      <ul>
-        <?php
-				$res=sql("s", "product", "*", " order by order1 desc");
-				$suk='';
-				$k=1;
-				foreach ($res as $info){
-					$jg=explode("-|-", gv($info,"jg"));
-					$fc=explode("-|-", gv($info,"fc"));
+      <ul ng-repeat="p in products">
 
-						$suk="<i class='cpjwa_con1_c1'>价格<br>".$jg[1]."</i><i class='cpjwa_con1_c2'>返利<br>".$fc[1]."</i>";
-        if($k%2==1){
-        $col="#FFFFFF";
-        }else{
-        $col="#FFFFCC";
-        }
-        echo '
+
         <li>
-          <div class="cpjwa_con1_a"><a href="product.php?id='.gv($info," id").'"><img src="../uploade/'.gv($info," sptu").'"
-            width="248" height="165"></a></div>
-          <div class="cpjwa_con1_b"><h2><a href="product.php?id='.gv($info," id").'">'.gv($info,"name").'</a></h2>
+          <div class="cpjwa_con1_a"><a href="#"><img src="/upload/{{p.sptu}}"
+                                                     width="248" height="165"></a></div>
+          <div class="cpjwa_con1_b">
+            <h2>
+              <a href="product?{{p.id}}">{{p.name}}
+              </a>
+            </h2>
 
-            <p class="cpjwa_con1_b_1"><i class="blue">推广说明：</i>'.chinesesubstr(gv($info,"tgsm"),0,131).'</p></div>
-          <div class="cpjwa_con1_c">'.$suk.'<a href="product.php?id='.gv($info," id").'" class="cpjwa_con1_c3"><img
-            src="../static/css/cp_img4.jpg" width="111" height="44"></a></div>
+            <p class="cpjwa_con1_b_1">
+              <i class="blue">推广说明：</i>{{p.tgsm}}
+            </p>
+          </div>
+
+          <div class="cpjwa_con1_c">
+            <i class='cpjwa_con1_c1'>价格<br>{{p.jg[1]}}</i><i class='cpjwa_con1_c2'>返利<br>{{p.fc[1]}}</i>
+            <a href="#/product/{{p.id}}" class="cpjwa_con1_c3">
+              <img src="/static/css/cp_img4.jpg" width="111" height="44">
+            </a>
+          </div>
         </li>
-        ';
-        $k++;
-        }
-        ?>
       </ul>
+
+
     </div>
 
     <div class="uc-pager"></div>

@@ -1,0 +1,59 @@
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+  <div class="right">
+    <div class="ddyjs_con">
+      <a href="#/user_detail">我的信息</a>
+      <a href="#/chgpw" class="a_pitch">修改密码</a>
+    </div>
+    <div class="right_con">
+      我的信息
+    </div>
+    <div class="right_con1">
+      <a href="#/user_detail">返回我的信息</a>
+    </div>
+    <div class="wdxx_con mtop">
+      <form class="comform" name="editpw" action="../control.php?oper=chgpw" method="post">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr class="bottom_boder">
+            <td width="132" height="67" class="text_inde">原密码：</td>
+            <td width="290">
+              <input type="password" name="oldpwd" class="textbox1"/></td>
+            <td width="30">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">新密码：</td>
+            <td><input type="password" name="pwd" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="bottom_boder">
+            <td height="67" class="text_inde">重复新密码：</td>
+            <td><input type="password" name="repwd" class="textbox1"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="100" colspan="4" class="table_left">
+              <input type="submit" name="button" value="" onClick="return passwordpk()"
+                     style="border:none; width:170px; height:49px; background:url(images/wdxx_qd.jpg)"/>
+            </td>
+          </tr>
+        </table>
+
+      </form>
+    </div>
+
+
+    <p class="ddxq_con1 mleft40 paddbotno paddtopno mtop5">
+      <i class="ddxq_con1_title">密码保护注意事项：</i><br/>
+      1、如自己收集订单信息，可点上方 录单 按钮录单，成功后若订单有误，请联系商户取消；<br/>
+      2、由于 反恶意下单机制，同一微信用户不能对同一商品重复下单，测试下单请使用不同的微信号；<br/>
+      3、可根据情况设置渠道参数（直接在此页面新增渠道即可）来统计分析不同渠道的推广效果；
+    </p>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

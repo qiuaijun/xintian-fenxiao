@@ -1,0 +1,186 @@
+﻿<div class="main index_main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right">
+    <div class="right_con">
+      商品详情
+    </div>
+    <div class="right_con1">
+      <a href="#/item">返回商品列表</a><a
+      href="#/buy" target="_blank"
+      class="right_con1_b">录单</a>
+    </div>
+    <div class="spxq_con">
+      <div class="spxq_con_a">
+        <p class="spxq_con_a_1">商品名称</p>
+
+        <p class="spxq_con_a_2">{{products.name}}</p>
+      </div>
+      <div class="spxq_con_b">
+        <h2>商品信息</h2>
+
+        <div class="spxq_con_b_1">
+          <img src="/uploade/{{products.sptu}}" width="320"/><br/>{{products.tgsm}}
+        </div>
+      </div>
+      <div class="spxq_con_b">
+        <h2>商品SKU</h2>
+
+        <div class="spxq_con_b_2">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr style="font-size:16px;">
+              <td width="294" height="35" class="xiayou">销售SKU</td>
+              <td width="133" height="35" class="xiayou">价格</td>
+              <td width="136" height="35" class="xia">分成</td>
+            </tr>
+            <tr ng-repeat="skuTmp in products.skus">
+              <td height="35" class="xiayou">{{skuTmp[0]}}</td>
+              <td height="35" class="xiayou">{{skuTmp[1]}}元</td>
+              <td height="35" class="xia">{{skuTmp[2]}}元</td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="spxq_con_b">
+        <h2>推广渠道</h2>
+
+        <div class="spxq_con_b_3">
+
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="180" height="34"><label for="select"></label>
+                <select style="width:150px" id="CH" onchange="setLink(this)">
+                  <option value="">不设置渠道</option>
+                  <?php
+										$res4=sql("s", "channel", "*", "where user='".$user."'");
+										if ($res4) {
+											foreach ($res4 as $info4){
+											echo '<option  value="'.gv($info4,"id").'">'.gv($info4,"name").'</option>';
+                  }
+                  }
+                  ?>
+                </select></td>
+              <td width="153" style="font-size:16px;"><a class="btn" href="#/user/addChannel">新增推广渠道</a>&nbsp;&nbsp;
+              </td>
+              <!--<form action="" method="get">
+              <td width="180"><label for="textfield"></label>
+              <input type="text" ph="渠道名称" id="name" class="spxq_textbox1 xialak"/></td>
+              <td width="86">
+              <a onClick="addCh()" class="zc_anniu">增&nbsp;加</a>
+              </td>
+              </form>-->
+            </tr>
+            <tr>
+              <td height="38" colspan="4">* 可选项，设置推广渠道后可按推广渠道统计订单，以分析或对比渠道的推广效果</td>
+            </tr>
+          </table>
+
+
+        </div>
+      </div>
+      <div class="spxq_con_b spxq_con_b_5">
+        <h2>模式一<i class="spxq_con_b_4_top">直接下单</i></h2>
+
+        <div class="spxq_con_b_4">
+          <form action="" method="get">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="34">阅读原文链接：</td>
+                <td height="34">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="431" height="34"><label for="textfield2"></label>
+                  <input id="link1" readonly style="width:400px" type="text"
+                         value="http://<?=$_SERVER['HTTP_HOST'];?>/user/buy.php?r=<?=$id;?>-<?=$user_id;?>"
+                         onfocus="$(this).select()" class="spxq_textbox3 xialak"/>
+                  <input id="link2" readonly style="width:400px" type="hidden"
+                         value="http://<?=$_SERVER['HTTP_HOST'];?>/user/buy.php?r=<?=$id;?>-<?=$user_id;?>"
+                         onfocus="$(this).select()"/>
+                </td>
+                <td height="34"><font color="#FF0000">阅读全文要与此链接一模一样</font></td>
+              </tr>
+              <tr>
+                <td width="391" height="50" style="padding-left:40px;"><font
+                  color="#FF0000">编辑图文信息完先预览，手机下测试订单，成功再推广</font>
+                </td>
+                <td height="34"></td>
+              </tr>
+              <tr>
+                <td height="34">宣传文案：</td>
+                <td height="34">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="34" colspan="2">1. <a target="_blank" class="acolhei"
+                                                  href="<?=gv($info,'url');?>"><?=gv($info,'title');?></a></td>
+              </tr>
+              <tr>
+                <td height="34">可用文案标题：</td>
+                <td height="34">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="34" colspan="2"><?=gv($info,'wasm');?> </td>
+              </tr>
+
+            </table>
+
+          </form>
+        </div>
+      </div>
+      <div class="spxq_con_b spxq_con_b_5">
+        <h2>模式二<i class="spxq_con_b_4_top">个人微信代理分享朋友圈文案</i></h2>
+
+        <div class="spxq_con_b_4">
+          <form action="" method="get">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="34">本产品分享链接：</td>
+                <td height="34">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="431" height="34"><label for="textfield2"></label>
+                  <input id="link3" readonly style="width:400px" type="text"
+                         value="http://<?=$_SERVER['HTTP_HOST'];?>/user/p.php?r=<?=$id;?>-<?=$user_id;?>"
+                         onfocus="$(this).select()" class="spxq_textbox3 xialak"/>
+                  <input id="link4" readonly style="width:400px" type="hidden"
+                         value="http://<?=$_SERVER['HTTP_HOST'];?>/user/p.php?r=<?=$id;?>-<?=$user_id;?>"
+                         onfocus="$(this).select()"/>
+                </td>
+                <td height="34"><select style="width:150px" id="CHS" onchange="setLink2(this)">
+                  <option value="">选择微信号</option>
+                  <?php
+										$res5=sql("s", "channel", "*", "where user='".$user."' and leixing='个人微信号'");
+										if ($res5) {
+											foreach ($res5 as $info5){
+											echo '<option  value="'.gv($info5,"id").'">'.gv($info5,"name").'</option>';
+                  }
+                  }
+                  ?>
+                </select></td>
+              </tr>
+              <tr>
+                <td width="391" height="50" style="padding-left:40px;"><font color="#FF0000">请用微信打开此链接，用微信预览无误，点击右上角【分享朋友圈】或【发送给朋友】即可推广</font>
+                </td>
+                <td height="34"></td>
+              </tr>
+              <tr>
+                <td height="34">朋友圈推广文案预览：</td>
+                <td height="34">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="34" colspan="2">1. <a target="_blank" class="acolhei"
+                                                  href="http://<?=$_SERVER['HTTP_HOST'];?>/user/p.php?r=<?=$id;?>-<?=$user_id;?>"><?=gv($info,'title');?></a>
+                </td>
+              </tr>
+            </table>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

@@ -10,8 +10,6 @@
 angular.module('xintianFenxiaoApp')
   .controller('MainCtrl', function ($scope, $location) {
     $scope.formLogin = function () {
-      //User.check();
-      alert('dsfsfds')
       console.log("send");
       $scope.title = 'testttttt';
       //如果鉴权通过，直接跳转到主页面

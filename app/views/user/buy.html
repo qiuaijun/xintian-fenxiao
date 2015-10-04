@@ -1,0 +1,130 @@
+﻿<link href="/static/css/buy.css" type="text/css" rel="stylesheet">
+<form id="form_buy" ng-submit="buy()">
+
+  <section class="item_sec">
+    <div class="item_wrap rel">
+      <ul>
+        <li><img src="/uploade/{{products.sptu}}" width="100%"></li>
+        <li style="margin:15px 0px 15px 0px;" class="i_pri"><b>{{products.name}}</b></li>
+      </ul>
+      <ul class="sku_ul" ng-repeat="skuTmp in products.skus">
+
+        <li><a data-jg="{{skuTmp[1]}}" data-suk="{{skuTmp[0]}}" data-fc="{{skuTmp[2]}}">{{skuTmp[0]}}</a></li>
+        <li><a ng-click="showJg(skuTmp[1]);">{{skuTmp[0]}}</a></li>
+      </ul>
+      <input style="visibility:hidden" name="post" id="paytypea" value="1"/>
+      <input style="visibility:hidden" name="guest" id="paytypea" value="无"/>
+      <input style="visibility:hidden" name="mob" id="paytypea" value="110110"/>
+      <input type="hidden" name="item_sku_id" id="item_sku_id" value="">
+
+      <p class="row">
+        <label>价　格 </label><input type="show" id="item_num" name="num" value="1"/>
+        <span class="i_pri" id="item_price">￥{{jg}}</span>
+      </p>
+
+      <div class="payaa">
+        <input type="radio" checked="checked" name="paytype" id="paytypea" value="货到付款"
+               onclick="opay();return changeItem(0);" class="dxk"/><label for="paytypea">货到付款</label>
+        <input type="radio" name="paytype" id="paytypeb" value="<?=gv($infoali,'alipay');?>"
+               onclick="opay2();return changeItem(1);" class="dxk"/><label for="paytypeb">支付宝在线付款</label>
+      </div>
+
+    </div>
+  </section>
+  <section class="item_sec">
+    <div class="item_wrap add">
+      <p class="row">
+        <label for="name">收货人</label>
+        <input required id="name" name="name" class="block input" tabindex="1" type="text" value=""/>
+      </p>
+
+      <p class="row">
+        <label for="tel">联系手机</label>
+        <input required id="tel" name="tel" maxlength="11"
+               onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)"
+               onblur="this.v();" class="block input" tabindex="2" type="tel" value=""/>
+      </p>
+
+      <p class="row">
+        <label for="province">选择地区</label>
+        <select class="select" id="province" name="province" tabindex="3">
+        </select><select class="select" id="city" name="city" tabindex="4">
+      </select><select class="select" id="area" name="area" tabindex="5">
+      </select>
+      </p>
+
+      <p class="row row_area">
+        <label for="address">详细地址</label>
+        <input required id="address" name="xdz" class="block input" placeholder="街道门牌信息" tabindex="6" type="text"
+               value="">
+      </p>
+      <!--<p class="row row_area">
+                <label>推荐人</label>
+                <input class="block input" tabindex="7" type="text" readonly value="1199">
+            </p>  -->
+    </div>
+  </section>
+  <footer>
+    <button type="submit" class="c_txt orange_bg" id="buy_now">提交订单</button>
+  </footer>
+</form>
+<script src="/static/js/base_H5.js"></script>
+<script src="/static/js/PCASClass.js"></script>
+<script>
+  //判断手机号码格式是否合法
+
+  function check_tel(obj){
+
+    var objvalue=obj.value;
+
+    var regx=/^(?:13\d|15\d|18[1234567890])-?\d{5}(\d{3}|\*{3})$/;
+
+    if(regx.test(objvalue)){
+
+      return 1;
+
+    }else{
+
+      return 0;
+
+    }
+
+  }
+
+
+  var pcas = new PCAS("province,省份", "city,城市", "area,地区");
+  var Item = {
+    getItemInfo: function () {
+
+    },
+    changeCount: function () {
+      $("#name").bind("focusout", function () {
+        var _this = $(this);
+        var val = _this.val();
+        if (1 != 1) {
+          alert("用户不可为空");
+          _this.val(1);
+          return;
+        }
+
+      })
+    },
+    init: function () {
+    }
+  }
+  $(".sku_ul a").bind("click", function () {//尺码点击
+    var o = $(this);
+    if (!o.hasClass("sku_cur")) {//点击的不是当前已经选中的
+      $(".sku_cur").removeClass("sku_cur");
+      o.addClass("sku_cur");
+      /*更新对应的选中尺码的数据*/
+      $("#item_price").html("￥" + o.attr("data-jg"));
+      $("#item_num").val(o.attr("data-jg"));
+      $("#suk").val(o.attr("data-suk"));
+      $("#fc").val(o.attr("data-fc"));
+      $("#jg").val(o.attr("data-jg"));
+    }
+  })
+  Item.init();
+</script>
+

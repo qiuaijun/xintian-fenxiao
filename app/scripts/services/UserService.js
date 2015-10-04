@@ -22,3 +22,12 @@ userServices.factory('User', ['$resource',
     });
   }])
 ;
+
+var userServices = angular.module('Product', ['ngResource']);
+
+userServices.factory('Product', ['$resource',
+  function ($resource) {
+    return $resource('/json/:productId.json', {}, {
+      query: {method: 'GET', params: {productId: 'products'}, isArray: true}
+    });
+  }]);

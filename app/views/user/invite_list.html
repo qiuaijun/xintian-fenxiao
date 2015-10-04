@@ -1,0 +1,40 @@
+﻿<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="#/invite">我的邀请码</a>
+      <a href="#/invite_list" class="a_pitch">我的邀请用户</a>
+      <a href="#/invite_reward">用户订单提成</a>
+    </div>
+    <div class="right_con">
+      邀请用户列表
+    </div>
+    <div class="right_con1 liebbroud">
+      我的邀请用户 <span class="mleft20"><!--<font color="#666666">数量：0</font><a href="../userlogin/" class="userlogina">查看用户登陆记录</a>--></span>
+    </div>
+
+    <div class="right_con2 mtop">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#f2f2f2" class="right_con2_top">
+          <td width="100" class="youxia">注册日期</td>
+          <td width="60" height="43" class="youxia">用户名</td>
+          <td width="130" class="youxia">联系QQ</td>
+          <td width="120" class="youxia">订单量</td>
+        </tr>
+
+        <tr bgcolor="#ffffff" ng-repeat="tmp in tmp_users">
+          <td class="youxia">{{tmp.time}}</td>
+          <td class="youxia">{{tmp.user}}</td>
+          <td class="youxia">{{tmp.qq}}</td>
+          <td class="xia">{{tmp.orderNum}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

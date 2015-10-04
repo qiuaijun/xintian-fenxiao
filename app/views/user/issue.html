@@ -1,0 +1,42 @@
+﻿<link rel="stylesheet" href="/static/css/index_style.css"/>
+
+<div class="main index_main">
+  <div ng-include="'/views/user/left.html'"></div>
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="#/order">推广的订单</a>
+      <a href="#/issue" class="a_pitch">退货拒收记录</a>
+      <a href="#/payoff">结算与返款</a>
+    </div>
+    <div class="right_con">
+      订单列表
+    </div>
+    <div class="right_con1">
+      <a href="/user/main.php">返回用户首页</a>
+    </div>
+    <div class="right_con2">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#f2f2f2" class="right_con2_top">
+          <td width="117" height="43" class="youxia">下单时间</td>
+          <td width="70" class="youxia">订单ID</td>
+          <td width="233" class="youxia">购买商品</td>
+          <td width="98" class="youxia">公众号</td>
+          <td width="97" class="youxia">总价/分成</td>
+          <td width="88" class="youxia">状态</td>
+          <td width="72" class="xia">详情</td>
+        </tr>
+        <tr bgcolor="#FFFFFF" ng-repeat="info in list">
+          <td height="36" class="youxia">{{info.time}}</td>
+          <td height="36" class="youxia">{{info.id}}</td>
+          <td height="36" class="youxia">{{info.spm}}</td>
+          <td height="36" class="youxia">{{info.channel}}</td>
+          <td height="36" class="youxia">{{info.jg/info.fc}}</td>
+          <td height="36" class="youxia">{{info.zt}}</td>
+          <td height="36" class="xia"><a href="order_detail.php?id='.gv($info,'id').'">查看详情</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

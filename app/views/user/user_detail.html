@@ -36,8 +36,8 @@
   <div ng-include="'/views/user/left.html'"></div>
   <div class="right">
     <div class="ddyjs_con">
-      <a href="/user/user_detail.php" class="a_pitch">我的信息</a>
-      <a href="/user/chgpw.php">修改密码</a>
+      <a href="#/user_detail" class="a_pitch">我的信息</a>
+      <a href="#/chgpw">修改密码</a>
     </div>
     <div class="right_con">
       我的信息
@@ -52,7 +52,7 @@
           <tr class="bottom_boder">
             <td width="132" height="67" class="text_inde">登陆名：</td>
             <td width="290">
-              <input type="text" name="loginname" disabled value="<?=$user;?>" style="background:#eeeeee;"
+              <input type="text" name="loginname" disabled value="{{user.user}}" style="background:#eeeeee;"
                      class="textbox1"/></td>
             <td width="30">&nbsp;</td>
             <td>&nbsp;</td>
@@ -65,19 +65,19 @@
 </tr>-->
           <tr class="bottom_boder">
             <td height="67" class="text_inde">QQ：</td>
-            <td><input type="text" name="qq" value="<?=gv($info," qq");?>" class="textbox1"/></td>
+            <td><input type="text" name="qq" value="{{user.qq}}" class="textbox1"/></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
           <tr class="bottom_boder">
             <td height="67" class="text_inde">手机：</td>
-            <td><input type="text" name="mobile" value="<?=gv($info," tel");?>" class="textbox1"/></td>
+            <td><input type="text" name="mobile" value="{{user.tel}}" class="textbox1"/></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
           <tr class="bottom_boder">
             <td height="67" class="text_inde">电子邮箱：</td>
-            <td><input type="text" name="email" value="<?=gv($info," email");?>" class="textbox1"/></td>
+            <td><input type="text" name="email" value="{{user.email}}" class="textbox1"/></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
@@ -93,8 +93,7 @@
           </tr>
           <tr class="bottom_boder">
             <td height="67" class="text_inde">粉丝数：</td>
-            <td><input type="text" name="haoyoushu" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" value="<?=gv($info,"
-                       haoyoushu");?>" class="textbox1"/>
+            <td><input type="text" name="haoyoushu" onkeyup="value=value.replace(/[^\-?\d.]/g,'')" value="{{user.haoyoushu}}" class="textbox1"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -103,9 +102,9 @@
             <td height="67" class="text_inde">支付宝账号：</td>
             <td>
               <input type="text" name="zhifubao" style="background:#eeeeee;" class="textbox1" disabled
-                     value="<?=gv($info," zhifubao");?>" />
+                     value="{{user.zhifubao}}" />
             </td>
-            <td><img src="../tp/3/images/wdxx_ico3.jpg" width="23" height="22"/></td>
+            <td><img src="/tp/3/images/wdxx_ico3.jpg" width="23" height="22"/></td>
             <td>
               不可更改！！ 用于打款的支付宝账号
             </td>
@@ -114,9 +113,9 @@
             <td height="67" class="text_inde">支付宝姓名：</td>
             <td>
               <input type="text" name="xingming" style="background:#eeeeee;" class="textbox1" disabled
-                     value="<?=gv($info," xingming");?>"/>
+                     value="{{user.xingming}}"/>
             </td>
-            <td><img src="../tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
+            <td><img src="/tp/3/images/wdxx_ico3.jpg" alt="" width="23" height="22"/></td>
             <td>
               不可更改！！ 真实姓名，用于打款核对
             </td>

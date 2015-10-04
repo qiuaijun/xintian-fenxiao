@@ -18,7 +18,8 @@ var fxApp =
       'ngRoute',
       'ngSanitize',
       'ngTouch',
-      'User'
+      'User',
+      'Product'
     ]);
 
 fxApp.config(function ($routeProvider) {
@@ -53,10 +54,30 @@ fxApp.config(function ($routeProvider) {
       controller: 'OrderCtrl',
       controllerAs: 'order'
     })
+    .when('/issue', {
+      templateUrl: 'views/user/issue.html',
+      controller: 'IssueCtrl',
+      controllerAs: 'issue'
+    })
+    .when('/payoff', {
+      templateUrl: 'views/user/payoff.html',
+      controller: 'PayOffCtrl',
+      controllerAs: 'payoff'
+    })
     .when('/invite', {
       templateUrl: 'views/user/invite.html',
       controller: 'InviteCtrl',
       controllerAs: 'invite'
+    })
+    .when('/invite_list', {
+      templateUrl: 'views/user/invite_list.html',
+      controller: 'InviteListCtrl',
+      controllerAs: 'inviteList'
+    })
+    .when('/invite_reward', {
+      templateUrl: 'views/user/invite_reward.html',
+      controller: 'InviteRewardCtrl',
+      controllerAs: 'inviteReward'
     })
     .when('/channelList', {
       templateUrl: 'views/user/channelList.html',
@@ -68,14 +89,40 @@ fxApp.config(function ($routeProvider) {
       controller: 'ChannelCtrl',
       controllerAs: 'addChannel'
     })
+    .when('/channel', {
+      templateUrl: 'views/user/channel.html',
+      controller: 'ChannelCtrl',
+      controllerAs: 'Channel'
+    })
+    .when('/product/:id', {
+      templateUrl: 'views/user/product.html',
+      controller: 'ProductCtrl',
+      controllerAs: 'Product'
+    })
+    .when('/buy/:id', {
+      templateUrl: 'views/user/buy.html',
+      controller: 'ProductCtrl',
+      controllerAs: 'Product'
+    })
+    .when('/pay', {
+      template: '<script>alert("订单提交成功！");</script> ',
+      controller: 'PayCtrl',
+      controllerAs: 'Pay'
+    })
     .when('/user_detail', {
       templateUrl: 'views/user/user_detail.html',
       controller: 'UserCtrl',
       controllerAs: 'user_detail'
     })
+    .when('/chgpw', {
+      templateUrl: 'views/user/chgpw.html',
+      controller: 'UserCtrl',
+      controllerAs: 'chgpw'
+    })
+
     .when('/terms', {
       templateUrl: 'views/user/terms.html',
-      controller: 'TeamsCtrl',
+      controller: 'TermsCtrl',
       controllerAs: 'terms'
     })
     .otherwise({

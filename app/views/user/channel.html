@@ -1,0 +1,57 @@
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="#/channelList">我的公众号</a>
+      <a href="#/channel" class="a_pitch">公众号统计</a>
+    </div>
+    <div class="right_con">
+      公众号统计
+    </div>
+    <div class="right_con1">
+      <a href="#/main.php">返回用户首页</a> <a class="right_con1_b" href="#/addChannel">添加公众号</a>
+    </div>
+
+    <div class="right_con2 mtop">
+      <table width="100%" cellpadding="5" border="0" bgcolor="#d3d3d3" cellspacing="1">
+        <tr bgcolor="#f5f5f5" class="right_con2_top">
+          <th>ID</th>
+          <th>平台名称</th>
+          <th>点击</th>
+          <th>浏览</th>
+          <th>永久绑定</th>
+          <th>总订单</th>
+          <th>发货</th>
+          <th>分成</th>
+          <th>签收</th>
+          <th>签收率</th>
+          <th>返款</th>
+          <th>拒收</th>
+          <th>拒收率</th>
+        </tr>
+        <tr bgcolor="#ffffff" ng-repeat="channel in channels">
+          <td class="youxia">{{channel.id}}</td>
+          <td class="youxia"><em>{{channel.name}}</em></td>
+          <td class="youxia">{{channel.click}}</td>
+          <td class="youxia">{{channel.see}}</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0%</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0</td>
+          <td class="youxia">0%</td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>

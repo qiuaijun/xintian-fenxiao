@@ -6,9 +6,9 @@
 
   <div class="right ming_right">
     <div class="ddyjs_con">
-      <a href="/user/invite.php" class="a_pitch">我的邀请码</a>
-      <a href="/user/invite_list.php">我的邀请用户</a>
-      <a href="/user/invite_reward.php">用户订单提成</a>
+      <a href="#/invite" class="a_pitch">我的邀请码</a>
+      <a href="#/invite_list">我的邀请用户</a>
+      <a href="#/invite_reward">用户订单提成</a>
     </div>
 
     <div class="right_con">
@@ -24,7 +24,7 @@
             <td width="150" height="34" align="right"><font color="#666666">我的邀请链接：</font></td>
             <td height="30"><font color="#666666">
               <input type="text" readonly id="link"
-                     value="http://<?=$_SERVER['HTTP_HOST'];?>/login/regist.php?invite=<?=gv($info," id");?>"
+                     value="http://localhost:9000/#/regist?invite={{userId}}"
               onfocus="$(this).select()" class="yaoqinglj"/><span class='zhushi'> （右击复制 ）</span> </font>
 
             </td>
@@ -33,22 +33,22 @@
             <td width="150" height="34" align="right"><font color="#666666">移动端邀请连接：</font></td>
             <td height="30"><font color="#666666">
               <input type="text" readonly id="link"
-                     value="http://<?=$_SERVER['HTTP_HOST'];?>/m/reg.php?invite=<?=gv($info," id");?>"
+                     value="http://<?=$_SERVER['HTTP_HOST'];?>/m/reg.html?invite={{userId}}"
               onfocus="$(this).select()" class="yaoqinglj"/><span class='zhushi'> （右击复制 ）</span> </font>
 
             </td>
           </tr>
           <tr style="margin-top:12px;">
             <td width="150" height="34" align="right"><font color="#666666">一级提成比率：</font></td>
-            <td height="34" colspan="3"><?=gv($info1,"bili")*100;?>%</td>
+            <td height="34" colspan="3">{{homeInfo.bili * 100}}%{{bili}}</td>
           </tr>
           <tr style="margin-top:12px;">
             <td width="150" height="34" align="right"><font color="#666666">二级提成比率：</font></td>
-            <td height="34" colspan="3"><?=gv($info1,"bili1")*100;?>%</td>
+            <td height="34" colspan="3">{{homeInfo.bili1 * 100}}%</td>
           </tr>
           <tr style="margin-top:12px;">
             <td width="150" height="34" align="right"><font color="#666666">三级提成比率：</font></td>
-            <td height="34" colspan="3"><?=gv($info1,"bili2")*100;?>%</td>
+            <td height="34" colspan="3">{{homeInfo.bili2 * 100}}%</td>
           </tr>
           <tr>
           <tr style="margin-top:12px;">
@@ -91,8 +91,6 @@
 
 </div>
 </div>
-<script>
-</script>
 <!--foot-->
 <div ng-include="'/views/user/foot.html'"></div>
 

@@ -1,0 +1,59 @@
+<link href="/images/index_style.css" rel="stylesheet" type="text/css">
+
+<div class="main">
+  <div ng-include="'/views/user/left.html'"></div>
+  <div class="right ming_right">
+    <div class="ddyjs_con">
+      <a href="#/invite">我的邀请码</a>
+      <a href="#/invite_list">我的邀请用户</a>
+      <a href="#/invite_reward" class="a_pitch">用户订单提成</a>
+    </div>
+    <div class="right_con">
+      邀请奖励结算
+    </div>
+    <div class="right_con2 mtop">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#f2f2f2" class="right_con2_top">
+          <td width="80px" class="youxia">结算日期</td>
+          <td width="80px" height="43" class="youxia">微信主</td>
+          <td width="80px" class="youxia">结算详情</td>
+          <td width="60px" class="youxia">结算金额</td>
+          <th width="60px" class="youxia">邀请奖励</th>
+        </tr>
+        <?php
+
+					$res=sql("s", "list", "*", "where shangjia='".$user."' and (zt=3 or zt=8) order by shangjiafan");
+					$ress=sql("s", "home", "*", "");
+					$info1=firstrow($ress);
+					if ($res) {
+				$k=1;
+						foreach ($res as $info){
+				if($k%2==1){
+					$col="#FFFFFF";
+				}else{
+					$col="#FFFFCC";
+				}
+				$k++;
+							if (gv($info,"shangjiafan")==0) {
+								$sate="未返款";
+							}else{
+								$sate="已返款";
+							}
+							echo '<tr  bgcolor="'.$col.'">
+        <td class="youxia">'.gv($info,"time").'</td>
+        <td class="youxia">'.gv($info,"tjr").'</td>
+        <td class="youxia">'.$sate.'</td>
+        <td class="youxia">'.gv($info,"fc").'</td>
+        <td class="youxia">'.gv($info,"fc")*gv($info1,"bili").'</td>
+        </tr>';
+        }
+        }
+        ?>
+      </table>
+      <div class="uc-pager"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!--foot-->
+<div ng-include="'/views/user/foot.html'"></div>
